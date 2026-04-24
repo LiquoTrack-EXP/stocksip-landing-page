@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="assets/images/stocksip_logo.png" type="image/x-icon"/>
+  <title>Download StockSip - Smart Inventory Management</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+    :root {
+      --wine: #2B000D;
+      --magenta: #7b2542;
+      --purple: #b26293;
+      --golden: #D98C4A;
+      --dark-text: #fff;
+      --dark-background: #222;
+      --light-text: #323130;
+      --light-background: #F7EDDC;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 62.5%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, var(--wine) 0%, var(--magenta) 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Animated Background */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.08)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+      opacity: 0.4;
+      animation: float 20s ease-in-out infinite;
+      z-index: 0;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at center, rgba(216, 140, 74, 0.15) 0%, transparent 50%);
+      animation: rotate 30s linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    /* Header */
+    header {
+      position: relative;
+      padding: 2rem 5%;
+      background: rgba(43, 0, 13, 0.8);
+      backdrop-filter: blur(10px);
+      z-index: 100;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      animation: pulse 2s infinite;
+    }
+
+    .logo img {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+    }
+
+    /* Main Content */
+    .download-container {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 2rem;
+      position: relative;
+      z-index: 10;
+    }
+
+    .download-content {
+      max-width: 800px;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(30px);
+      border-radius: 30px;
+      padding: 6rem 4rem;
+      text-align: center;
+      box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      animation: fadeInUp 0.8s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .download-content::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, var(--magenta), var(--purple), var(--golden));
+    }
+
+    .app-icon {
+      width: 150px;
+      height: 150px;
+      margin: 0 auto 3rem;
+      background: linear-gradient(135deg, var(--wine) 0%, var(--magenta) 100%);
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 7rem;
+      box-shadow: 0 15px 35px rgba(123, 37, 66, 0.4);
+      animation: pulse 2s infinite;
+
+      img {
+        width: 120px;
+        height: 120px;
+        object-fit: contain;
+      }
+    }
+
+    h1 {
+      font-size: 4.5rem;
+      font-weight: 900;
+      color: var(--wine);
+      margin-bottom: 1.5rem;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .version {
+      font-size: 2rem;
+      color: var(--purple);
+      margin-bottom: 3rem;
+      font-weight: 600;
+    }
+
+    .description {
+      font-size: 1.8rem;
+      color: var(--light-text);
+      line-height: 1.8;
+      margin-bottom: 4rem;
+      opacity: 0.9;
+    }
+
+    .download-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 1.5rem;
+      background: linear-gradient(45deg, var(--magenta), var(--purple));
+      color: white;
+      padding: 2rem 4rem;
+      border-radius: 50px;
+      font-size: 2.2rem;
+      font-weight: 700;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 15px 35px rgba(123, 37, 66, 0.4);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .download-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, var(--purple), var(--wine));
+      transition: left 0.3s ease;
+      z-index: -1;
+    }
+
+    .download-button:hover::before {
+      left: 0;
+    }
+
+    .download-button:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 45px rgba(123, 37, 66, 0.6);
+    }
+
+    .download-icon {
+      font-size: 2.5rem;
+    }
+
+    .features-list {
+      margin-top: 5rem;
+      text-align: left;
+      background: rgba(123, 37, 66, 0.05);
+      padding: 3rem;
+      border-radius: 20px;
+      border: 2px solid rgba(123, 37, 66, 0.1);
+    }
+
+    .features-list h3 {
+      font-size: 2.4rem;
+      color: var(--magenta);
+      margin-bottom: 2rem;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .features-list ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .features-list li {
+      font-size: 1.6rem;
+      color: var(--light-text);
+      padding: 1rem 0 1rem 3rem;
+      position: relative;
+      border-bottom: 1px solid rgba(123, 37, 66, 0.1);
+    }
+
+    .features-list li:last-child {
+      border-bottom: none;
+    }
+
+    .features-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 2.5rem;
+      height: 2.5rem;
+      background: linear-gradient(135deg, var(--magenta), var(--purple));
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .system-requirements {
+      margin-top: 4rem;
+      padding: 2rem;
+      background: rgba(217, 140, 74, 0.1);
+      border-left: 5px solid var(--golden);
+      border-radius: 0 15px 15px 0;
+      text-align: left;
+    }
+
+    .system-requirements h4 {
+      font-size: 1.8rem;
+      color: var(--wine);
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .system-requirements p {
+      font-size: 1.5rem;
+      color: var(--light-text);
+      line-height: 1.6;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 3rem;
+      font-size: 1.6rem;
+      color: var(--purple);
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .back-link:hover {
+      color: var(--magenta);
+      transform: translateX(-5px);
+    }
+
+    /* Footer */
+    footer {
+      position: relative;
+      background: rgba(43, 0, 13, 0.9);
+      color: var(--light-background);
+      text-align: center;
+      padding: 2rem;
+      font-size: 1.4rem;
+      z-index: 100;
+    }
+
+    footer a {
+      color: var(--golden);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    footer a:hover {
+      color: var(--light-background);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      html {
+        font-size: 55%;
+      }
+
+      .download-content {
+        padding: 4rem 2rem;
+      }
+
+      h1 {
+        font-size: 3.5rem;
+      }
+
+      .app-icon {
+        width: 120px;
+        height: 120px;
+        font-size: 5rem;
+      }
+
+      .download-button {
+        padding: 1.8rem 3rem;
+        font-size: 1.8rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      html {
+        font-size: 50%;
+      }
+
+      .download-content {
+        padding: 3rem 1.5rem;
+      }
+
+      h1 {
+        font-size: 3rem;
+      }
+
+      .app-icon {
+        width: 100px;
+        height: 100px;
+        font-size: 4rem;
+      }
+
+      .features-list {
+        padding: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <a href="index.html" class="logo">
+    <img src="assets/images/stocksip_logo.png" alt="StockSip Logo">
+  </a>
+</header>
+
+<div class="download-container">
+  <div class="download-content">
+    <div class="app-icon">
+      <img src="assets/images/stocksip_logo.png" alt="StockSip App Icon">
+    </div>
+
+    <h1>Download StockSip</h1>
+    <p class="version">Version 2.0.0</p>
+
+    <p class="description">
+      Get started with the most advanced inventory management solution for liquor stores.
+      Download the app now and transform the way you manage your business.
+    </p>
+
+    <a href="https://github.com/LiquoTrack/stocksip-android-app-distribution/releases/download/v.2.0.0/stocksip-app.apk"
+       class="download-button"
+       download>
+      <span class="download-icon">⬇</span>
+      Download for Android
+    </a>
+
+    <br/><br/>
+    <br/><br/>
+
+    <a href="https://github.com/LiquoTrack/stocksip-multiplatform-app-distribution/releases/download/1.0.0/stocksip-app-flutter.apk"
+       class="download-button"
+       download>
+      <span class="download-icon">⬇</span>
+      Download for Multiple Platforms
+    </a>
+
+    <div class="features-list">
+      <h3>What's Included</h3>
+      <ul>
+        <li>Inventory Management</li>
+        <li>Smart alerts and notifications</li>
+        <li>Advanced care guides</li>
+        <li>Multi-warehouse management</li>
+        <li>Profile management tools</li>
+        <li>User-friendly interface</li>
+        <li>Sales management</li>
+      </ul>
+    </div>
+
+    <div class="system-requirements">
+      <h4>System Requirements</h4>
+      <p>
+        <strong>Platform:</strong> Android 5.0 (Lollipop) or higher<br>
+        <strong>Storage:</strong> Minimum 50 MB available space<br>
+        <strong>Internet:</strong> Required for sync and cloud features
+      </p>
+    </div>
+
+    <a href="index.html" class="back-link">← Back to Home</a>
+  </div>
+</div>
+
+<footer>
+  <p>©Copyright, LiquoTrack 2025. All rights reserved |
+    <a href="terms_conditions.html">Terms and Conditions</a> |
+    <a href="privacy.html">Privacy Policy</a></p>
+</footer>
+</body>
+</html>
