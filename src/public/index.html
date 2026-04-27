@@ -1,879 +1,582 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="icon" href="assets/images/stocksip_logo.png" type="image/x-icon"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StockSip — Gestión de inventario inteligente</title>
+    <meta name="description" content="StockSip es una app de gestión de inventario para licorerías: menos quiebres, más ventas, control total." />
+    <link rel="icon" type="image/x-icon" href="assets/images/stocksip.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="assets/styles/styles.css" />
-    <title>StockSip - Smart Inventory Management</title>
-</head>
-<body>
+  </head>
+  <body>
+    <header>
+      <div class="container header-inner">
+        <a class="brand" href="#home" aria-label="StockSip">
+          <img src="assets/images/stocksip_logo.png" alt="StockSip" />
+          <span>StockSip</span>
+        </a>
 
-<header id="header">
-    <a href="#" class="logo" onclick="toggleSidebar()">
-        <img src="assets/images/stocksip_logo.png" alt="StockSip Logo">
-    </a>
-
-    <nav class="navbar">
-        <a href="#home" data-i18n="nav.home">Home</a>
-        <a href="#product" data-i18n="nav.product">Product</a>
-        <a href="#features" data-i18n="nav.features">Features</a>
-        <a href="#benefits" data-i18n="nav.benefits">Benefits</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact" data-i18n="nav.contact">Contact</a>
-        <button onclick="window.location.href='download.html'" data-i18n="nav.empezar">
-            Get Started
-        </button>
-    </nav>
-
-    <div class="language-selector">
-        <button onclick="setLang('es')">ES</button>
-        <span>|</span>
-        <button onclick="setLang('en')">EN</button>
-    </div>
-
-    <button class="mobile-menu-btn" onclick="toggleSidebar()" aria-label="Abrir menú">
-        <i class="fas fa-bars"></i>
-    </button>
-</header>
-
-<div class="sidebar" id="sidebar">
-    <div class="sidebar-content">
-        <nav class="navbar">
-            <a href="#home" data-i18n="nav.home" onclick="closeSidebar()">Home</a>
-            <a href="#product" data-i18n="nav.product" onclick="closeSidebar()">Product</a>
-            <a href="#features" data-i18n="nav.features" onclick="closeSidebar()">Features</a>
-            <a href="#benefits" data-i18n="nav.benefits" onclick="closeSidebar()">Benefits</a>
-            <a href="#faq" onclick="closeSidebar()">FAQ</a>
-            <a href="#contact" data-i18n="nav.contact" onclick="closeSidebar()">Contact</a>
-            <button onclick="window.location.href='download.html'" data-i18n="nav.empezar">
-                Get Started
-            </button>
+        <nav class="nav" aria-label="Navegación principal">
+          <a href="#home" data-i18n="nav_home">Home</a>
+          <a href="#product" data-i18n="nav_product">Producto</a>
+          <a href="#features" data-i18n="nav_features">Características</a>
+          <a href="#benefits" data-i18n="nav_benefits">Beneficios</a>
+          <a href="#faq" data-i18n="nav_faq">FAQ</a>
+          <a href="#contact" data-i18n="nav_contact">Contacto</a>
         </nav>
 
-        <div class="language-selector">
-            <button onclick="setLanguage('es')">ES</button>
-            <span>|</span>
-            <button onclick="setLanguage('en')">EN</button>
+        <div class="header-actions">
+          <div class="lang" aria-label="Selector de idioma">
+            <button class="lang-btn" type="button" data-lang="es">ES</button>
+            <button class="lang-btn" type="button" data-lang="en">EN</button>
+          </div>
+
+          <a class="btn btn-primary" href="#plans" data-i18n="header_start">Empezar</a>
+
+          <button class="hamburger" type="button" aria-label="Abrir menú" aria-controls="drawer" aria-expanded="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <path d="M4 7h16" />
+              <path d="M4 12h16" />
+              <path d="M4 17h16" />
+            </svg>
+          </button>
         </div>
-    </div>
-</div>
+      </div>
+    </header>
 
-<div class="sidebar-overlay" id="sidebar-overlay" onclick="closeSidebar()"></div>
-
-<section class="home" id="home">
-    <!-- Floating Elements -->
-    <div class="floating-element"></div>
-    <div class="floating-element"></div>
-    <div class="floating-element"></div>
-
-    <!-- Particle Elements -->
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-
-    <div class="content">
-        <h3 data-i18n="home.title">Optimize your inventory intelligently with StockSip!</h3>
-        <a href="#product" class="btn" data-i18n="home.ver_planes">View plans</a>
-    </div>
-</section>
-
-<!-- About StockSip & Stats Section -->
-<section class="about-stats-section">
-    <div class="section-container">
-        <!-- About StockSip - Cards -->
-        <div class="about-content">
-            <h2 class="about-title animate-on-scroll" data-i18n="about_title">About StockSip</h2>
-            <div class="card-container">
-                <div class="card mission-card animate-on-scroll">
-                    <h3 data-i18n="cards.mission.title">MISSION</h3>
-                    <p data-i18n="cards.mission.description">Provide a solution for liquor store owners to manage their inventory efficiently and take better care of their products.</p>
-                </div>
-
-                <div class="card vision-card animate-on-scroll">
-                    <h3 data-i18n="cards.vision.title">VISION</h3>
-                    <p data-i18n="cards.vision.description">To be the leading app in intelligent liquor store management, facilitating informed decisions and an excellent customer experience.</p>
-                </div>
-
-                <div class="card values-card animate-on-scroll">
-                    <h3 data-i18n="cards.values.title">VALUES</h3>
-                    <ul>
-                        <li data-i18n="cards.values.transparencia">Transparency</li>
-                        <li data-i18n="cards.values.innovation">Constant innovation</li>
-                        <li data-i18n="cards.values.responsibility">Responsibility to customers</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Stats -->
-        <div class="stats-content">
-            <h2 class="stats-title animate-on-scroll" data-i18n="stats_title">Results that speak for themselves</h2>
-            <p class="stats-subtitle animate-on-scroll" data-i18n="stats_subtitle">
-                Our solution has transformed inventory management in liquor stores, optimizing processes and maximizing profits.
-            </p>
-
-            <div class="stats-grid">
-                <div class="stat-item animate-on-scroll">
-                    <div class="stat-number" data-target="500">0</div>
-                    <div class="stat-label" data-i18n="stats_1_label">Liquor stores managed</div>
-                </div>
-                <div class="stat-item animate-on-scroll">
-                    <div class="stat-number" data-target="99">0</div>
-                    <div class="stat-label" data-i18n="stats_2_label">Satisfied customers</div>
-                </div>
-                <div class="stat-item animate-on-scroll">
-                    <div class="stat-number" data-target="35">0</div>
-                    <div class="stat-label" data-i18n="stats_3_label">Reduction in stockouts</div>
-                </div>
-                <div class="stat-item animate-on-scroll">
-                    <div class="stat-number" data-target="20">0</div>
-                    <div class="stat-label" data-i18n="stats_4_label">Increase in sales</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- CTA Section -->
-<section class="cta-section" id="cta2">
-    <!-- Floating Elements -->
-    <div class="floating-element"></div>
-    <div class="floating-element"></div>
-    <div class="floating-element"></div>
-
-    <!-- Particle Elements -->
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-
-    <div class="cta-container">
-        <h2 class="animate-on-scroll" data-i18n="cta2.title">Professionalize inventory management in your liquor store</h2>
-        <p class="animate-on-scroll" data-i18n="cta2.description">Our application is designed to facilitate stock control, minimize losses, and maximize your sales. Keep real-time track of your products, receive automatic replenishment alerts, and maintain order in your warehouse simply and efficiently.</p>
-        <button class="cta-button animate-on-scroll" onclick="window.location.href='download.html'" data-i18n="cta2.button">Get Started</button>
-    </div>
-</section>
-
-<section class="features" id="features">
-    <h2 class="animate-on-scroll" data-i18n="features.title">How does it work?</h2>
-
-    <!-- Steps -->
-    <div class="steps-container">
-        <div class="step animate-on-scroll">
-            <span class="step-number">1</span>
-            <p data-i18n="features.step1">Register your products and current inventory levels</p>
-        </div>
-        <div class="step animate-on-scroll">
-            <span class="step-number">2</span>
-            <p data-i18n="features.step2">Receive smart alerts when levels are low or there is excess stock</p>
-        </div>
-        <div class="step animate-on-scroll">
-            <span class="step-number">3</span>
-            <p data-i18n="features.step3">Access sales reports and recommendations in real time</p>
-        </div>
-    </div>
-
-    <div class="card-container">
-        <div class="card animate-on-scroll">
-            <div class="card-front">
-                <img src="assets/images/icon-tracking.png" alt="Stock Tracking">
-                <h3 data-i18n="features.card1.title">Stock Tracking</h3>
-                <p data-i18n="features.card1.description">Monitor your inventory in real time with comprehensive analytics and detailed reporting systems.</p>
-            </div>
-            <div class="card-back">
-                <div class="card-details">
-                    <h4 data-i18n="features.card1.subtitle">More about Tracking</h4>
-                    <p data-i18n="features.card1.details">Get complete visibility of your inventory levels.</p>
-                    <ul>
-                        <li data-i18n="features.card1.list.0">Real-time control</li>
-                        <li data-i18n="features.card1.list.1">Low stock alerts</li>
-                        <li data-i18n="features.card1.list.2">Detailed history</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="card animate-on-scroll">
-            <div class="card-front">
-                <img src="assets/images/icon-bell.png" alt="Bell Icon">
-                <h3 data-i18n="features.card2.title">Receive Alerts</h3>
-                <p data-i18n="features.card2.description">Stay informed about stock levels, expiration dates, and critical inventory movements instantly.</p>
-            </div>
-            <div class="card-back">
-                <div class="card-details">
-                    <h4 data-i18n="features.card2.subtitle">Alert Details</h4>
-                    <p data-i18n="features.card2.details">Don't miss anything important.</p>
-                    <ul>
-                        <li data-i18n="features.card2.list.0">Email notifications</li>
-                        <li data-i18n="features.card2.list.1">Expiration alerts</li>
-                        <li data-i18n="features.card2.list.2">Reorder reminders</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="card animate-on-scroll">
-            <div class="card-front">
-                <img src="assets/images/icon-money.png" alt="Optimization Icon">
-                <h3 data-i18n="features.card3.title">Optimize Purchases</h3>
-                <p data-i18n="features.card3.description">Make data-driven decisions with intelligent purchase recommendations and supplier analysis.</p>
-            </div>
-            <div class="card-back">
-                <div class="card-details">
-                    <h4 data-i18n="features.card3.subtitle">Optimization Tips</h4>
-                    <p data-i18n="features.card3.details">Buy smarter and more efficiently.</p>
-                    <ul>
-                        <li data-i18n="features.card3.list.0">Analyze your sales</li>
-                        <li data-i18n="features.card3.list.1">Forecast demand</li>
-                        <li data-i18n="features.card3.list.2">Compare suppliers</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="product-showcase" id="product">
-    <h2 class="animate-on-scroll" data-i18n="showcase_title">Product Showcase</h2>
-    <p class="animate-on-scroll" data-i18n="showcase_subtitle">Experience the power of intelligent inventory management through our intuitive interface</p>
-
-    <div class="image-carousel animate-on-scroll">
-        <div class="carousel-container">
-            <div class="carousel-slide active">
-                <img src="assets/images/show case.png" alt="Dashboard Overview">
-            </div>
-            <div class="carousel-slide">
-                <img src="assets/images/show case 1.png" alt="Inventory Management">
-            </div>
-        </div>
-
-        <button class="carousel-nav prev" onclick="changeSlide(-1)">
-            <i class="fas fa-chevron-left"></i>
+    <div class="drawer-overlay" data-drawer-overlay></div>
+    <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Menú">
+      <div class="drawer-top">
+        <span style="font-weight: 700">Menu</span>
+        <button class="drawer-close" type="button" aria-label="Cerrar menú" data-drawer-close>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M6 6l12 12" />
+            <path d="M18 6l-12 12" />
+          </svg>
         </button>
-        <button class="carousel-nav next" onclick="changeSlide(1)">
-            <i class="fas fa-chevron-right"></i>
-        </button>
-    </div>
+      </div>
+      <nav aria-label="Navegación móvil">
+        <a href="#home" data-i18n="nav_home" data-drawer-link>Home</a>
+        <a href="#product" data-i18n="nav_product" data-drawer-link>Producto</a>
+        <a href="#features" data-i18n="nav_features" data-drawer-link>Características</a>
+        <a href="#benefits" data-i18n="nav_benefits" data-drawer-link>Beneficios</a>
+        <a href="#faq" data-i18n="nav_faq" data-drawer-link>FAQ</a>
+        <a href="#contact" data-i18n="nav_contact" data-drawer-link>Contacto</a>
+      </nav>
 
-    <div class="carousel-indicators">
-        <span class="indicator active" onclick="goToSlide(0)"></span>
-        <span class="indicator" onclick="goToSlide(1)"></span>
-        <span class="indicator" onclick="goToSlide(2)"></span>
-        <span class="indicator" onclick="goToSlide(3)"></span>
-        <span class="indicator" onclick="goToSlide(4)"></span>
-    </div>
-</section>
+      <div class="lang" aria-label="Selector de idioma">
+        <button class="lang-btn" type="button" data-lang="es">ES</button>
+        <button class="lang-btn" type="button" data-lang="en">EN</button>
+      </div>
 
-<!-- Video Section -->
-<section class="video-section">
-    <div class="video-container">
-        <h2 class="animate-on-scroll" data-i18n="video_section_title">Exploration of the application</h2>
-        <div class="video-placeholder animate-on-scroll">
-            <iframe width="800" height="400" src="https://www.youtube.com/embed/UVUOSBgljZw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <a class="btn btn-primary" href="#plans" data-i18n="header_start" data-drawer-link>Empezar</a>
+    </aside>
+
+    <main>
+      <section id="home" class="section hero bg-top">
+        <div class="container hero-grid">
+          <div>
+            <h1 class="hero-headline" aria-label="Gestión de inventario inteligente">
+              <span class="word" style="--i: 0" data-i18n="hero_word_1">Gestión</span>
+              <span class="word" style="--i: 1" data-i18n="hero_word_2">de</span>
+              <span class="word" style="--i: 2" data-i18n="hero_word_3">inventario</span>
+              <span class="word" style="--i: 3" data-i18n="hero_word_4">inteligente</span>
+            </h1>
+
+            <p class="hero-sub" data-i18n="hero_sub">Controla stock en tiempo real, reduce quiebres y ordena con datos. Diseñado para licorerías.</p>
+
+            <div class="hero-cta" style="margin-top: 1.5rem">
+              <a class="btn btn-primary" href="#plans" data-i18n="hero_cta_primary">Ver planes</a>
+              <a class="btn btn-secondary" href="#features" data-i18n="hero_cta_secondary">Cómo funciona</a>
+            </div>
+          </div>
+
+          <div class="stats" data-counters>
+            <div class="stat">
+              <div class="value" data-counter data-target="500" data-prefix="" data-suffix="+">0</div>
+              <div class="label" data-i18n="stat_1">licorerías</div>
+            </div>
+            <div class="stat">
+              <div class="value" data-counter data-target="99" data-prefix="" data-suffix="%">0</div>
+              <div class="label" data-i18n="stat_2">satisfacción</div>
+            </div>
+            <div class="stat">
+              <div class="value" data-counter data-target="35" data-prefix="" data-suffix="%">0</div>
+              <div class="label" data-i18n="stat_3">menos quiebres</div>
+            </div>
+            <div class="stat">
+              <div class="value" data-counter data-target="20" data-prefix="+" data-suffix="%">0</div>
+              <div class="label" data-i18n="stat_4">ventas</div>
+            </div>
+          </div>
         </div>
-    </div>
+      </section>
 
-    <div class="team-container">
-        <h2 class="animate-on-scroll" data-i18n="video_section_title2">About the team</h2>
-        <div class="team-section">
-            <h3 class="animate-on-scroll" data-i18n="team.title">Team Members</h3>
-            <p class="animate-on-scroll" data-i18n="team.subtitle">These are the names behind the StockSip initiative</p>
-            <div class="team-grid animate-on-scroll">
-                <div class="team-cards">
-                    <div class="team-card">
-                        <img src="assets/images/member-nicolas.png" alt="Team Member Nicolas">
-                        <h3>Nicolas Juarez</h3>
-                        <p>Team Leader</p>
-                    </div>
-                    <div class="team-card">
-                        <img src="assets/images/member-oscar.jpeg" alt="Team Member Oscar">
-                        <h3>Sergio Julca</h3>
-                        <p>Team Member</p>
-                    </div>
-                    <div class="team-card">
-                        <img src="assets/images/member-farid.png" alt="Team Member Farid">
-                        <h3>Farid Coronel</h3>
-                        <p>Team Member</p>
-                    </div>
-                    <div class="team-card">
-                        <img src="assets/images/member_matias.jpg" alt="Team Member Matias">
-                        <h3>Matías Diaz</h3>
-                        <p>Team Member</p>
-                    </div>
-                </div>
-            </div>
-            <div class="video-container">
-                <div class="video-placeholder animate-on-scroll">
-                    <iframe width="800" height="400" src="https://www.youtube.com/embed/SnMdtAE_ovE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </div>
+      <section class="section bg-bottom" aria-labelledby="about-title">
+        <div class="container">
+          <div class="section-title">
+            <span class="kicker" data-i18n="about_kicker">Enfoque</span>
+            <h2 id="about-title" data-i18n="about_title">Misión · Visión · Valores</h2>
+          </div>
+
+          <div class="cards-3">
+            <article class="glass card animate-fade-up" data-stagger style="--i: 0">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 20V10" />
+                <path d="M18 20V4" />
+                <path d="M6 20v-6" />
+              </svg>
+              <h3 data-i18n="about_mission_t">Misión</h3>
+              <p data-i18n="about_mission_p">Simplificar el control de inventario con decisiones basadas en datos, sin fricción.</p>
+            </article>
+
+            <article class="glass card animate-fade-up" data-stagger style="--i: 1">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z" />
+                <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+              </svg>
+              <h3 data-i18n="about_vision_t">Visión</h3>
+              <p data-i18n="about_vision_p">Que cada licorería opere con claridad: stock exacto, pedidos inteligentes y margen mejorado.</p>
+            </article>
+
+            <article class="glass card animate-fade-up" data-stagger style="--i: 2">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 21s-7-4.4-7-11a4 4 0 0 1 7-2.2A4 4 0 0 1 19 10c0 6.6-7 11-7 11Z" />
+              </svg>
+              <h3 data-i18n="about_values_t">Valores</h3>
+              <p data-i18n="about_values_p">Precisión, simplicidad y enfoque en el negocio: lo esencial primero, siempre.</p>
+            </article>
+          </div>
         </div>
-    </div>
-</section>
+      </section>
 
-<!-- Gradient container -->
-<div class="unified-gradient-container">
-
-    <!-- Benefits Section -->
-    <section class="benefits-section" id="benefits">
-        <h2 class="animate-on-scroll" data-i18n="benefits.title">Benefits</h2>
-        <div class="benefits-points">
-            <div class="benefit-point animate-on-scroll">
-                <span data-i18n="benefits.point1">Reduce losses from expiration</span>
-            </div>
-            <div class="benefit-point animate-on-scroll">
-                <span data-i18n="benefits.point2">Improve product turnover</span>
-            </div>
-            <div class="benefit-point animate-on-scroll">
-                <span data-i18n="benefits.point3">Make data-driven decisions</span>
-            </div>
+      <section class="section mid-cta bg-top" aria-labelledby="mid-cta-title">
+        <svg class="float-particles" viewBox="0 0 1000 300" preserveAspectRatio="none" aria-hidden="true">
+          <circle cx="120" cy="90" r="18" />
+          <circle cx="260" cy="210" r="26" />
+          <circle cx="430" cy="110" r="20" />
+          <circle cx="620" cy="220" r="30" />
+          <circle cx="780" cy="120" r="22" />
+          <circle cx="900" cy="200" r="18" />
+        </svg>
+        <div class="container inner">
+          <h2 id="mid-cta-title" data-i18n="mid_cta_title">Inventario claro. Decisiones rápidas.</h2>
+          <div>
+            <a class="btn btn-primary" href="#product" data-i18n="mid_cta_btn">Ver el producto</a>
+          </div>
         </div>
+      </section>
 
-        <div class="benefits-cards">
-            <div class="benefit-card animate-on-scroll">
-                <h3 data-i18n="benefits.card1.title">FOR LIQUOR STORE OWNERS</h3>
-                <ul>
-                    <li data-i18n="benefits.card1.list.0">Loss reduction</li>
-                    <li data-i18n="benefits.card1.list.1">Efficient stock management</li>
-                    <li data-i18n="benefits.card1.list.2">Improve profits</li>
-                </ul>
+      <section id="features" class="section bg-bottom" aria-labelledby="features-title">
+        <div class="container">
+          <div class="section-title">
+            <span class="kicker" data-i18n="features_kicker">Producto</span>
+            <h2 id="features-title" data-i18n="features_title">Cómo funciona</h2>
+          </div>
+
+          <div class="steps">
+            <div class="step-connector" aria-hidden="true"></div>
+
+            <div class="step">
+              <div class="step-index">1</div>
+              <div class="flip-wrap animate-scale" data-stagger style="--i: 0">
+                <div class="flip">
+                  <div class="flip-face flip-front glass">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M8 7h8" />
+                      <path d="M8 11h8" />
+                      <path d="M8 15h6" />
+                      <path d="M6 3h12a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" />
+                    </svg>
+                    <h3 data-i18n="feat_1_t">Registra</h3>
+                    <p data-i18n="feat_1_p">Entradas, salidas y ajustes con trazabilidad simple.</p>
+                  </div>
+                  <div class="flip-face flip-back glass">
+                    <h3 data-i18n="feat_1_b_t">Resultados</h3>
+                    <ul>
+                      <li data-i18n="feat_1_b_1">Kardex siempre actualizado</li>
+                      <li data-i18n="feat_1_b_2">Menos errores manuales</li>
+                      <li data-i18n="feat_1_b_3">Historial por producto</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div class="benefit-card animate-on-scroll">
-                <h3 data-i18n="benefits.card2.title">FOR SUPPLIERS</h3>
-                <ul>
-                    <li data-i18n="benefits.card2.list.0">Demand prediction</li>
-                    <li data-i18n="benefits.card2.list.1">Streamlined deliveries</li>
-                    <li data-i18n="benefits.card2.list.2">Performance improvement</li>
-                </ul>
+            <div class="step">
+              <div class="step-index">2</div>
+              <div class="flip-wrap animate-scale" data-stagger style="--i: 1">
+                <div class="flip">
+                  <div class="flip-face flip-front glass">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M12 3v18" />
+                      <path d="M3 12h18" />
+                      <path d="M20 16a4 4 0 0 0-4 4" />
+                      <path d="M8 20a4 4 0 0 0-4-4" />
+                    </svg>
+                    <h3 data-i18n="feat_2_t">Analiza</h3>
+                    <p data-i18n="feat_2_p">Indicadores claros para reponer a tiempo.</p>
+                  </div>
+                  <div class="flip-face flip-back glass">
+                    <h3 data-i18n="feat_2_b_t">Resultados</h3>
+                    <ul>
+                      <li data-i18n="feat_2_b_1">Alertas de mínimos</li>
+                      <li data-i18n="feat_2_b_2">Rotación por categoría</li>
+                      <li data-i18n="feat_2_b_3">Ventas y margen</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
+
+            <div class="step">
+              <div class="step-index">3</div>
+              <div class="flip-wrap animate-scale" data-stagger style="--i: 2">
+                <div class="flip">
+                  <div class="flip-face flip-front glass">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M7 17l10-10" />
+                      <path d="M7 7h10v10" />
+                    </svg>
+                    <h3 data-i18n="feat_3_t">Optimiza</h3>
+                    <p data-i18n="feat_3_p">Pedidos inteligentes para crecer sin sobrestock.</p>
+                  </div>
+                  <div class="flip-face flip-back glass">
+                    <h3 data-i18n="feat_3_b_t">Resultados</h3>
+                    <ul>
+                      <li data-i18n="feat_3_b_1">Menos quiebres</li>
+                      <li data-i18n="feat_3_b_2">Compras más precisas</li>
+                      <li data-i18n="feat_3_b_3">Más ventas por disponibilidad</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- FAQ Section -->
-    <section class="faq-section" id="faq">
-        <h2 class="faq-title animate-on-scroll" data-i18n="faq_title">Frequently Asked Questions</h2>
+      <section id="product" class="section bg-bottom" aria-labelledby="product-title">
+        <div class="container">
+          <div class="section-title">
+            <span class="kicker" data-i18n="product_kicker">Interfaz</span>
+            <h2 id="product-title" data-i18n="product_title">Product showcase</h2>
+          </div>
 
-        <div class="faq-container">
-            <div class="faq-item animate-on-scroll">
-                <div class="faq-question" onclick="toggleFAQ(this)">
-                    <span data-i18n="faq_q1">How does this app help me manage my liquor store?</span>
-                    <span class="arrow">▼</span>
+          <div class="carousel" data-carousel>
+            <div class="carousel-viewport">
+              <div class="carousel-track" data-carousel-track>
+                <div class="slide is-active" data-slide>
+                  <div class="slide-inner glass">
+                    <img loading="lazy" alt="sign-in" src="./assets/images/login.png" />
+                  </div>
                 </div>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        <span data-i18n="faq_a1">Our app allows you to keep real-time inventory control, record sales, receive low stock alerts, and optimize your orders to suppliers with intelligent analytics.</span>
-                    </div>
+                <div class="slide" data-slide>
+                  <div class="slide-inner glass">
+                    <img loading="lazy" alt="sign-up" src="./assets/images/register.png" />
+                  </div>
                 </div>
+                <div class="slide" data-slide>
+                  <div class="slide-inner glass">
+                    <img loading="lazy" alt="mobile" src="./assets/images/login-register.png" />
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div class="faq-item animate-on-scroll">
-                <div class="faq-question" onclick="toggleFAQ(this)">
-                    <span data-i18n="faq_q2">Can I receive notifications when a product runs out?</span>
-                    <span class="arrow">▼</span>
-                </div>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        <span data-i18n="faq_a2">Yes, you will receive automatic alerts when a product is about to run out, allowing you to make timely decisions and avoid costly stockouts.</span>
-                    </div>
-                </div>
-            </div>
+            <div class="carousel-controls">
+              <button class="carousel-arrow" type="button" aria-label="Anterior" data-prev>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M15 18l-6-6 6-6" />
+                </svg>
+              </button>
 
-            <div class="faq-item animate-on-scroll">
-                <div class="faq-question" onclick="toggleFAQ(this)">
-                    <span data-i18n="faq_q3">Does the app allow generating sales and stock reports?</span>
-                    <span class="arrow">▼</span>
-                </div>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        <span data-i18n="faq_a3">Absolutely! Generate detailed reports on sales performance, profit margins, best-selling products, and comprehensive inventory turnover analysis.</span>
-                    </div>
-                </div>
-            </div>
+              <div class="dots" aria-label="Navegación del carrusel" data-dots></div>
 
-            <div class="faq-item animate-on-scroll">
-                <div class="faq-question" onclick="toggleFAQ(this)">
-                    <span data-i18n="faq_q4">Is it difficult to set up the app for my business?</span>
-                    <span class="arrow">▼</span>
-                </div>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        <span data-i18n="faq_a4">Not at all! The setup is straightforward and intuitive. We also provide comprehensive support and tutorials to get you started quickly.</span>
-                    </div>
-                </div>
+              <button class="carousel-arrow" type="button" aria-label="Siguiente" data-next>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M9 18l6-6-6-6" />
+                </svg>
+              </button>
             </div>
+          </div>
         </div>
+      </section>
 
-        <a href="#" class="start-button animate-on-scroll" onclick="window.location.href='download.html'" data-i18n="start_now_button">Get Started Now</a>
-    </section>
+      <section class="section bg-bottom" aria-labelledby="team-title">
+        <div class="container">
+          <div class="section-title">
+            <span class="kicker" data-i18n="team_kicker">Equipo</span>
+            <h2 id="team-title" data-i18n="team_title">Hecho por gente de producto</h2>
+          </div>
 
-    <!-- Plans Section -->
-    <section class="plans-section" id="plans">
-        <h2 class="animate-on-scroll" data-i18n="plans.title">Plans</h2>
+          <div class="team">
+            <article class="member glass animate-fade-up" data-stagger style="--i: 0">
+              <img loading="lazy" alt="Nicolas" src="./assets/images/member-nicolas.png" />
+              <div>
+                <div class="name">Nicolas</div>
+                <div class="role" data-i18n="team_1">Ingeniería de Software</div>
+              </div>
+            </article>
+            <article class="member glass animate-fade-up" data-stagger style="--i: 1">
+              <img loading="lazy" alt="Matias" src="./assets/images/member_matias.jpg" />
+              <div>
+                <div class="name">Matias</div>
+                <div class="role" data-i18n="team_2">Ingeniería de Software</div>
+              </div>
+            </article>
+            <article class="member glass animate-fade-up" data-stagger style="--i: 2">
+              <img loading="lazy" alt="Farid" src="./assets/images/member-farid.png" />
+              <div>
+                <div class="name">Farid</div>
+                <div class="role" data-i18n="team_3">Ingeniería de Software</div>
+              </div>
+            </article>
+            <article class="member glass animate-fade-up" data-stagger style="--i: 3">
+              <img loading="lazy" alt="Sergio" src="./assets/images/member-sergio.jpeg" />
+              <div>
+                <div class="name">Sergio</div>
+                <div class="role" data-i18n="team_4">Ingeniería de Software</div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
 
-        <div class="plans-container">
+      <section class="section bg-bottom" aria-labelledby="video-section-title">
+        <div class="container">
+          <div class="section-title">
+            <span class="kicker" data-i18n="video_kicker">Video</span>
+            <h2 id="video-section-title" data-i18n="video_section_title">Exploración de la aplicación</h2>
+          </div>
+
+          <div class="video-container">
+            <div class="video-wrapper glass animate-fade-up">
+              <iframe width="800" height="400" src="https://www.youtube.com/embed/UVUOSBgljZw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="benefits" class="section bg-top" aria-labelledby="benefits-title">
+        <div class="container">
+          <div class="section-title">
+            <span class="kicker" style="color: rgba(255, 255, 255, 0.72)" data-i18n="benefits_kicker">Impacto</span>
+            <h2 id="benefits-title" data-i18n="benefits_title">Beneficios reales</h2>
+          </div>
+
+          <div class="badges">
+            <span class="badge" data-i18n="benefit_badge_1">Stock en tiempo real</span>
+            <span class="badge" data-i18n="benefit_badge_2">Reposición inteligente</span>
+            <span class="badge" data-i18n="benefit_badge_3">Menos quiebres</span>
+          </div>
+
+          <div class="benefits-grid">
+            <article class="benefits-col">
+              <h3 data-i18n="benefits_col_1">Para licorerías</h3>
+              <div class="checks">
+                <div class="check"><span class="mark">✓</span><span data-i18n="benefits_l_1">Alertas por mínimos y caducidad</span></div>
+                <div class="check"><span class="mark">✓</span><span data-i18n="benefits_l_2">Control de costos y margen</span></div>
+                <div class="check"><span class="mark">✓</span><span data-i18n="benefits_l_3">Reportes simples para decidir</span></div>
+              </div>
+            </article>
+
+            <article class="benefits-col">
+              <h3 data-i18n="benefits_col_2">Para proveedores</h3>
+              <div class="checks">
+                <div class="check"><span class="mark">✓</span><span data-i18n="benefits_p_1">Demanda más predecible</span></div>
+                <div class="check"><span class="mark">✓</span><span data-i18n="benefits_p_2">Menos urgencias, más planificación</span></div>
+                <div class="check"><span class="mark">✓</span><span data-i18n="benefits_p_3">Relación basada en datos</span></div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="section bg-bottom" aria-labelledby="faq-title">
+        <div class="container">
+          <div class="section-title">
+            <span class="kicker" data-i18n="faq_kicker">Dudas</span>
+            <h2 id="faq-title" data-i18n="faq_title">FAQ</h2>
+          </div>
+
+          <div class="faq glass" data-faq>
+            <div class="faq-item">
+              <button class="faq-q" type="button" aria-expanded="false">
+                <span data-i18n="faq_q_1">¿StockSip funciona en múltiples sucursales?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="faq-a" aria-hidden="true"><div><p data-i18n="faq_a_1">Sí. Puedes gestionar inventario por ubicación y consolidar reportes.</p></div></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" type="button" aria-expanded="false">
+                <span data-i18n="faq_q_2">¿Necesito capacitación?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="faq-a" aria-hidden="true"><div><p data-i18n="faq_a_2">La interfaz es minimalista. Incluimos onboarding guiado y soporte.</p></div></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" type="button" aria-expanded="false">
+                <span data-i18n="faq_q_3">¿Puedo exportar mis datos?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="faq-a" aria-hidden="true"><div><p data-i18n="faq_a_3">Sí. Exportación para reportes y conciliación operativa.</p></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="plans" class="section bg-top" aria-labelledby="plans-title">
+        <div class="container">
+          <div class="section-title">
+            <span class="kicker" style="color: rgba(255, 255, 255, 0.72)" data-i18n="plans_kicker">Precios</span>
+            <h2 id="plans-title" data-i18n="plans_title">Planes</h2>
+          </div>
+
+          <div class="plans" data-plan-counters>
             <!-- Free Plan -->
-            <div class="plan-card animate-on-scroll">
-                <h3 data-i18n="plans.free.title">Free</h3>
-                <div class="price" data-i18n="plans.free.price">S/. 0</div>
-                <ul>
-                    <li data-i18n="plans.free.warehouse">Up to 1 warehouse</li>
-                    <li data-i18n="plans.free.products">Manage up to 50 products</li>
-                    <li data-i18n="plans.free.guides">Storage guides</li>
-                    <li data-i18n="plans.free.alerts">Basic alerts</li>
-                    <li data-i18n="plans.free.support">Community support</li>
-                </ul>
-                <button data-i18n="plans.free.button">Get Started</button>
-            </div>
+            <article class="plan animate-fade-up" data-stagger style="--i: 0">
+              <h3 data-i18n="plans.free.title">Gratis</h3>
+              <div class="price" data-i18n="plans.free.price">S/. 0</div>
+              <ul>
+                <li data-i18n="plans.free.warehouse">Hasta 1 almacén</li>
+                <li data-i18n="plans.free.products">Gestionar hasta 50 productos</li>
+                <li data-i18n="plans.free.guides">Guías de almacenamiento</li>
+                <li data-i18n="plans.free.alerts">Alertas básicas</li>
+                <li data-i18n="plans.free.support">Soporte comunitario</li>
+              </ul>
+              <button class="btn btn-secondary" data-i18n="plans.free.button">Empezar</button>
+            </article>
 
             <!-- Monthly Premium Plan - Most Popular -->
-            <div class="plan-card premium animate-on-scroll">
-                <h3 data-i18n="plans.monthly.title">Monthly Premium</h3>
-                <div class="price" data-i18n="plans.monthly.price">S/. 19.90<span style="font-size: 1.6rem; font-weight: 400;">/month</span></div>
-                <ul>
-                    <li data-i18n="plans.monthly.warehouse">Up to 5 warehouses</li>
-                    <li data-i18n="plans.monthly.products">Unlimited products</li>
-                    <li data-i18n="plans.monthly.guides">Advanced storage guides</li>
-                    <li data-i18n="plans.monthly.alerts">Custom alerts & notifications</li>
-                    <li data-i18n="plans.monthly.support">Priority support</li>
-                    <li data-i18n="plans.monthly.analytics">Advanced analytics</li>
-                    <li data-i18n="plans.monthly.integration">API integration</li>
-                </ul>
-                <button data-i18n="plans.monthly.button">Start Free Trial</button>
-            </div>
+            <article class="plan popular animate-fade-up" data-stagger style="--i: 1">
+              <span class="popular-badge" data-i18n="plan_popular">MÁS POPULAR</span>
+              <h3 style="margin-top: 10px" data-i18n="plans.monthly.title">Premium Mensual</h3>
+              <div class="price" data-i18n="plans.monthly.price">S/. 19.90<span style="font-size: 1.6rem; font-weight: 400;">/mes</span></div>
+              <ul>
+                <li data-i18n="plans.monthly.warehouse">Hasta 5 almacenes</li>
+                <li data-i18n="plans.monthly.products">Productos ilimitados</li>
+                <li data-i18n="plans.monthly.guides">Guías de almacenamiento avanzadas</li>
+                <li data-i18n="plans.monthly.alerts">Alertas personalizadas y notificaciones</li>
+                <li data-i18n="plans.monthly.support">Soporte prioritario</li>
+                <li data-i18n="plans.monthly.analytics">Analíticas avanzadas</li>
+                <li data-i18n="plans.monthly.integration">Integración API</li>
+              </ul>
+              <button class="btn btn-primary" data-i18n="plans.monthly.button">Iniciar prueba gratis</button>
+            </article>
 
-            <!-- Annual Premium Plan -->
-            <div class="plan-card animate-on-scroll">
-                <h3 data-i18n="plans.annual.title">Annual Premium</h3>
-                <div class="price" data-i18n="plans.annual.price">S/. 179.90<span style="font-size: 1.6rem; font-weight: 400;">/year</span></div>
-                <div style="background: var(--golden); color: var(--wine); padding: 0.5rem 1rem; border-radius: 15px; font-size: 1.4rem; font-weight: 600; margin: 1rem 0;" data-i18n="plans.annual.savings">Save 25%!</div>
-                <ul>
-                    <li data-i18n="plans.annual.warehouse">Up to 10 warehouses</li>
-                    <li data-i18n="plans.annual.products">Unlimited products</li>
-                    <li data-i18n="plans.annual.guides">Premium storage guides</li>
-                    <li data-i18n="plans.annual.alerts">Smart alerts & automation</li>
-                    <li data-i18n="plans.annual.support">24/7 priority support</li>
-                    <li data-i18n="plans.annual.analytics">Premium analytics & reports</li>
-                    <li data-i18n="plans.annual.integration">Full API access</li>
-                    <li data-i18n="plans.annual.training">Personal training session</li>
-                </ul>
-                <button data-i18n="plans.annual.button">Choose Annual</button>
+            <article class="plan animate-fade-up" data-stagger style="--i: 2">
+              <h3 data-i18n="plans.annual.title">Premium Anual</h3>
+              <div class="price" data-i18n="plans.annual.price">S/. 179.90<span style="font-size: 1.6rem; font-weight: 400;">/año</span></div>
+              <div style="background: rgba(229, 62, 62, 0.15); color: var(--white); padding: 0.5rem 1rem; border-radius: 15px; font-size: 0.85rem; font-weight: 600; margin: 1rem 0; text-align: center;" data-i18n="plans.annual.savings">¡Ahorra 25%!</div>
+              <ul>
+                <li data-i18n="plans.annual.warehouse">Hasta 10 almacenes</li>
+                <li data-i18n="plans.annual.products">Productos ilimitados</li>
+                <li data-i18n="plans.annual.guides">Guías de almacenamiento premium</li>
+                <li data-i18n="plans.annual.alerts">Alertas inteligentes y automatización</li>
+                <li data-i18n="plans.annual.support">Soporte prioritario 24/7</li>
+                <li data-i18n="plans.annual.analytics">Analíticas premium y reportes</li>
+                <li data-i18n="plans.annual.integration">Acceso completo a API</li>
+                <li data-i18n="plans.annual.training">Sesión de capacitación personalizada</li>
+              </ul>
+              <button class="btn btn-secondary" data-i18n="plans.annual.button">Elegir anual</button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section bg-bottom" aria-labelledby="testimonials-title">
+        <div class="container">
+          <div class="section-title">
+            <span class="kicker" data-i18n="testi_kicker">Confianza</span>
+            <h2 id="testimonials-title" data-i18n="testi_title">Testimonios</h2>
+          </div>
+
+          <div class="testimonials">
+            <article class="quote glass animate-fade-up" data-stagger style="--i: 0">
+              <p data-i18n="testi_1">“Ahora reponemos con seguridad. Bajaron los quiebres y el equipo trabaja más rápido.”</p>
+              <div class="quote-footer">
+                <img loading="lazy" alt="Cliente" src="./assets/images/team1.png" />
+                <div class="who">
+                  <strong>Paola</strong>
+                  <span class="muted" data-i18n="testi_1_who">Licorería Centro</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="quote glass animate-fade-up" data-stagger style="--i: 1">
+              <p data-i18n="testi_2">“La claridad de los reportes nos ayudó a comprar mejor. Menos sobrestock.”</p>
+              <div class="quote-footer">
+                <img loading="lazy" alt="Cliente" src="./assets/images/team2.png" />
+                <div class="who">
+                  <strong>Diego</strong>
+                  <span class="muted" data-i18n="testi_2_who">Distribuidora Norte</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="quote glass animate-fade-up" data-stagger style="--i: 2">
+              <p data-i18n="testi_3">“Implementación simple y soporte atento. Se siente hecho para el día a día.”</p>
+              <div class="quote-footer">
+                <img loading="lazy" alt="Cliente" src="./assets/images/team3.png" />
+                <div class="who">
+                  <strong>Sofía</strong>
+                  <span class="muted" data-i18n="testi_3_who">Licorería Sur</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="bg-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <a class="brand" href="#home" aria-label="StockSip">
+              <img src="assets/images/stocksip_logo.png" alt="StockSip" />
+              <span>StockSip</span>
+            </a>
+            <p style="color: rgba(255, 255, 255, 0.72); max-width: 46ch" data-i18n="footer_tagline">Inventario minimalista para operar mejor. Datos claros, menos ruido.</p>
+          </div>
+
+          <div>
+            <strong style="color: rgba(255, 255, 255, 0.92)" data-i18n="footer_nav">Navegación</strong>
+            <div style="display: grid; gap: 10px; margin-top: 12px">
+              <a href="#product" data-i18n="nav_product">Producto</a>
+              <a href="#features" data-i18n="nav_features">Características</a>
+              <a href="#plans" data-i18n="plans_title">Planes</a>
+              <a href="#faq" data-i18n="nav_faq">FAQ</a>
             </div>
+          </div>
+
+          <div>
+            <strong style="color: rgba(255, 255, 255, 0.92)" data-i18n="footer_social">Redes</strong>
+            <div style="display: grid; gap: 10px; margin-top: 12px">
+              <a href="#" aria-label="Instagram">Instagram</a>
+              <a href="#" aria-label="LinkedIn">LinkedIn</a>
+              <a href="#" aria-label="Correo">hola@stocksip.app</a>
+            </div>
+          </div>
         </div>
 
-        <div class="plan-conditions animate-on-scroll">
-            <h4 data-i18n="plans.conditions.title">Plan Features & Conditions</h4>
-            <ul>
-                <li data-i18n="plans.conditions.trial">14-day free trial for all premium plans</li>
-                <li data-i18n="plans.conditions.cancel">No contracts: cancel anytime</li>
-                <li data-i18n="plans.conditions.availability">Available for liquor stores and distributors</li>
-                <li data-i18n="plans.conditions.support">24/7 customer support for premium users</li>
-                <li data-i18n="plans.conditions.upgrade">Easy upgrade/downgrade between plans</li>
-            </ul>
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+          <span>© <span id="year"></span> StockSip</span>
+          <div class="footer-links">
+            <a href="terms_conditions.html" data-i18n="footer_terms">Términos</a>
+            <a href="privacy.html" data-i18n="footer_privacy">Privacidad</a>
+          </div>
         </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="testimonials" id="testimonials">
-        <div class="testimonials__header">
-            <h1 data-i18n="testimonials.title">Testimonials</h1>
-            <p data-i18n="testimonials.description">
-                This is what our users say about our solution when using it in their business!
-            </p>
-        </div>
-
-        <div class="testimonial-card">
-            <img src="assets/images/female-testimonial.png" alt="Image of a Female Testimonial" class="testimonial-card__img">
-            <div class="testimonial-card__content">
-                <p data-i18n="testimonials.card1.text">
-                    'Thanks to StockSip, I can now manage my liquor store inventory without worrying about stockouts or expired products. Now there are less devolutions!'
-                </p>
-            </div>
-            <div class="testimonial-card__footer">
-                <p>Sandra Mendoza</p>
-                <p>Distribuidora Andina – Arequipa, Perú</p>
-            </div>
-        </div>
-
-        <div class="testimonial-card">
-            <img src="assets/images/male-testimonial.png" alt="Image of a Male Testimonial" class="testimonial-card__img">
-            <div class="testimonial-card__content">
-                <p data-i18n="testimonials.card2.text">
-                    'Before using StockSip, I lost a lot of money due to expired products. Now I can keep track of everything and make better decisions.'
-                </p>
-            </div>
-            <div class="testimonial-card__footer">
-                <p>Martín Ríos</p>
-                <p>Licorería Don Pepe – Lima, Perú</p>
-            </div>
-        </div>
-    </section>
-
-</div>
-
-<footer id="contact">
-    <div class="contact-container">
-        <div class="stocksip">
-            <div class="social-media">
-                <i class="fab fa-facebook-f"></i>
-                <i class="fab fa-twitter"></i>
-                <i class="fab fa-linkedin-in"></i>
-            </div>
-            <h3 data-i18n="footer.slogan">Quality and efficiency are guaranteed in every bottle</h3>
-        </div>
-        <nav class="footer-nav">
-            <ul>
-                <li><a href="#home" data-i18n="nav.home">Home</a></li>
-                <li><a href="#product">Product</a></li>
-                <li><a href="#features" data-i18n="nav.features">Features</a></li>
-                <li><a href="#benefits" data-i18n="nav.benefits">Benefits</a></li>
-            </ul>
-        </nav>
-    </div>
-    <div class="copyright-text">
-        <span data-i18n="footer.rights">©Copyright, LiquoTrack 2025. All rights reserved</span>
-        <span style="margin: 0 1rem;">|</span>
-        <a href="terms_conditions.html" style="color: var(--light-background); text-decoration: none; font-size: 1.6rem;" data-i18n="footer.terms">Terms and Conditions</a>
-        <span style="margin: 0 1rem;">|</span>
-        <a href="privacy.html" style="color: var(--light-background); text-decoration: none; font-size: 1.6rem;" data-i18n="footer.privacy">Privacy Policy</a>
-    </div>
-</footer>
-
-<script src="assets/scripts/i18n.js"></script>
-<script>
-    // ======================
-    // SIDEBAR FUNCTIONALITY
-    // ======================
-
-    // Función para alternar el sidebar
-    function toggleSidebar() {
-        // Just toggle sidebar on mobile devices
-        if (window.innerWidth <= 768) {
-            const sidebar = document.getElementById('sidebar');
-            const overlay = document.getElementById('sidebar-overlay');
-
-            sidebar.classList.toggle('active');
-            overlay.classList.toggle('active');
-
-            // Prevent body scroll when sidebar is active
-            if (sidebar.classList.contains('active')) {
-                document.body.style.overflow = 'hidden';
-            } else {
-                document.body.style.overflow = '';
-            }
-        }
-    }
-
-    // Close sidebar function
-    function closeSidebar() {
-        const sidebar = document.getElementById('sidebar');
-        const overlay = document.getElementById('sidebar-overlay');
-
-        if (sidebar && overlay) {
-            sidebar.classList.remove('active');
-            overlay.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-    }
-
-    // ======================
-    // FAQ FUNCTIONALITY
-    // ======================
-
-    function toggleFAQ(element) {
-        const faqItem = element.parentElement;
-        const faqAnswer = faqItem.querySelector('.faq-answer');
-        const faqContent = faqItem.querySelector('.faq-answer-content');
-        const isActive = faqItem.classList.contains('active');
-
-        document.querySelectorAll('.faq-item').forEach(item => {
-            const answer = item.querySelector('.faq-answer');
-            item.classList.remove('active');
-            answer.style.maxHeight = '0';
-            answer.style.padding = '0 25px';
-        });
-
-        if (!isActive) {
-            faqItem.classList.add('active');
-            const contentHeight = faqContent.scrollHeight;
-            faqAnswer.style.maxHeight = contentHeight + 50 + 'px';
-            faqAnswer.style.padding = '25px';
-        }
-    }
-
-    // ======================
-    // IMAGE CAROUSEL FUNCTIONALITY
-    // ======================
-
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.carousel-slide');
-    const indicators = document.querySelectorAll('.indicator');
-    const totalSlides = slides.length;
-
-    function showSlide(index) {
-        if (slides.length === 0) return;
-
-        // Remove active class from all slides and indicators
-        slides.forEach(slide => {
-            slide.classList.remove('active', 'prev');
-        });
-        indicators.forEach(indicator => {
-            indicator.classList.remove('active');
-        });
-
-        // Add active class to current slide and indicator
-        slides[index].classList.add('active');
-        if (indicators[index]) {
-            indicators[index].classList.add('active');
-        }
-
-        // Add prev class to previous slide for animation
-        const prevIndex = index === 0 ? totalSlides - 1 : index - 1;
-        slides[prevIndex].classList.add('prev');
-    }
-
-    function changeSlide(direction) {
-        if (slides.length === 0) return;
-
-        currentSlide += direction;
-
-        if (currentSlide >= totalSlides) {
-            currentSlide = 0;
-        } else if (currentSlide < 0) {
-            currentSlide = totalSlides - 1;
-        }
-
-        showSlide(currentSlide);
-    }
-
-    function goToSlide(index) {
-        if (slides.length === 0) return;
-
-        currentSlide = index;
-        showSlide(currentSlide);
-    }
-
-    // ======================
-    // SCROLL ANIMATIONS
-    // ======================
-
-    function animateOnScroll() {
-        const elements = document.querySelectorAll('.animate-on-scroll');
-
-        elements.forEach(element => {
-            const elementTop = element.getBoundingClientRect().top;
-            const elementVisible = 150;
-
-            if (elementTop < window.innerHeight - elementVisible) {
-                element.classList.add('animated');
-            }
-        });
-    }
-
-    // ======================
-    // COUNTER ANIMATION
-    // ======================
-
-    let countersAnimated = new Set();
-
-    function animateCounters() {
-        const counters = document.querySelectorAll('.stat-number[data-target]');
-
-        counters.forEach(counter => {
-            const target = parseInt(counter.getAttribute('data-target'));
-            const counterTop = counter.getBoundingClientRect().top;
-
-            if (counterTop < window.innerHeight - 100 && !countersAnimated.has(counter)) {
-                countersAnimated.add(counter);
-                const increment = target / 100;
-                let current = 0;
-
-                const updateCounter = () => {
-                    if (current < target) {
-                        current += increment;
-                        counter.textContent = Math.floor(current);
-                        setTimeout(updateCounter, 20);
-                    } else {
-                        counter.textContent = target;
-                    }
-                };
-
-                updateCounter();
-            }
-        });
-    }
-
-    // ======================
-    // HEADER SCROLL EFFECT
-    // ======================
-
-    let lastScrollTop = 0;
-
-    function handleHeaderScroll() {
-        const header = document.getElementById('header');
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-        // Añadir clase 'scrolled' cuando se hace scroll
-        if (scrollTop > 100) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-
-        lastScrollTop = scrollTop;
-    }
-
-    // ======================
-    // SMOOTH SCROLLING
-    // ======================
-
-    function initSmoothScrolling() {
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-                // Cerrar sidebar después de hacer clic en un enlace
-                closeSidebar();
-            });
-        });
-    }
-
-
-
-    // ======================
-    // EVENT LISTENERS
-    // ======================
-
-    // Event listener for scroll events
-    window.addEventListener('scroll', () => {
-        animateOnScroll();
-        animateCounters();
-        handleHeaderScroll();
-    });
-
-    // Close sidebar on window resize if width > 768px
-    window.addEventListener('resize', function() {
-        if (window.innerWidth > 768) {
-            closeSidebar();
-        }
-    });
-
-    // Close sidebar on Escape key press
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-            closeSidebar();
-        }
-    });
-
-    // Event listener
-    window.addEventListener('load', () => {
-        animateOnScroll();
-        initSmoothScrolling();
-    });
-
-    // ======================
-    // DOM CONTENT LOADED
-    // ======================
-
-    document.addEventListener('DOMContentLoaded', function() {
-        // FAQ items
-        document.querySelectorAll('.faq-item').forEach(item => {
-            const answer = item.querySelector('.faq-answer');
-            if (answer && !item.classList.contains('active')) {
-                answer.style.maxHeight = '0';
-                answer.style.padding = '0 25px';
-            }
-        });
-
-        // Smooth scrolling
-        initSmoothScrolling();
-
-        const sidebar = document.getElementById('sidebar');
-        if (sidebar) {
-            sidebar.addEventListener('click', function(e) {
-                e.stopPropagation();
-            });
-        }
-
-        // Auto-advance carousel every 5 seconds
-        if (slides.length > 0) {
-            setInterval(() => {
-                changeSlide(1);
-            }, 5000);
-        }
-
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navbar = document.querySelector('.navbar');
-
-        if (menuToggle) {
-            menuToggle.addEventListener('click', () => {
-                if (window.innerWidth <= 768) {
-                    toggleSidebar();
-                } else {
-                    navbar.classList.toggle('active');
-                }
-            });
-        }
-    });
-
-    // ======================
-    // UTILITY FUNCTIONS
-    // ======================
-
-    // Detect if device is mobile
-    function isMobile() {
-        return window.innerWidth <= 768;
-    }
-
-    // Debounce function to limit the rate of function calls
-    function debounce(func, wait) {
-        let timeout;
-        return function executedFunction(...args) {
-            const later = () => {
-                clearTimeout(timeout);
-                func(...args);
-            };
-            clearTimeout(timeout);
-            timeout = setTimeout(later, wait);
-        };
-    }
-
-    const debouncedScroll = debounce(() => {
-        animateOnScroll();
-        animateCounters();
-        handleHeaderScroll();
-    }, 10);
-
-    // SCROLL EVENT LISTENER
-    window.removeEventListener('scroll', () => {
-        animateOnScroll();
-        animateCounters();
-        handleHeaderScroll();
-    });
-
-    window.addEventListener('scroll', debouncedScroll);
-
-    // ======================
-    // GLOBAL FUNCTIONS
-    // ======================
-
-    // Hacer funciones globalmente accesibles
-    window.toggleSidebar = toggleSidebar;
-    window.closeSidebar = closeSidebar;
-    window.toggleFAQ = toggleFAQ;
-    window.changeSlide = changeSlide;
-    window.goToSlide = goToSlide;
-    window.setLanguage = setLanguage;
-
-</script>
-
-</body>
+      </div>
+    </footer>
+
+    <script src="assets/scripts/i18n.js"></script>
+    <script src="assets/scripts/script.js"></script>
+  </body>
 </html>
