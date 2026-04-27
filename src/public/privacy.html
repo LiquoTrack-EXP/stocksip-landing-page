@@ -1,271 +1,201 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="assets/styles/styles.css" />
-  <link rel="icon" href="assets/images/stocksip_logo.png" type="image/x-icon"/>
-  <title data-i18n="privacy.title">Privacy Policy - StockSip</title>
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-</head>
-
-<body>
-<header id="header">
-  <a href="index.html" class="logo">
-    <img src="assets/images/stocksip_logo.png" alt="StockSip Logo">
-  </a>
-  <nav class="navbar">
-    <a href="index.html#home" data-i18n="nav.home">Home</a>
-    <a href="index.html#product" data-i18n="nav.product">Product</a>
-    <a href="index.html#features" data-i18n="nav.features">Features</a>
-    <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
-  </nav>
-
-  <div class="language-selector" style="display: flex; align-items: center; gap: 1rem; background: var(--wine); border-radius: 5rem; padding: 1rem;">
-    <button onclick="setLang('es')" style="font-size: 1.8rem; color: var(--light-background); background: none; cursor: pointer;">ES</button>
-    <span style="color: var(--light-background);">|</span>
-    <button onclick="setLang('en')" style="font-size: 1.8rem; color: var(--light-background); background: none; cursor: pointer;">EN</button>
-  </div>
-</header>
-
-<a href="index.html" class="back-button" data-i18n="privacy.back">← Back to Home</a>
-
-<div class="privacy-container">
-  <!-- Header Section -->
-  <div class="privacy-header">
-    <h1 data-i18n="privacy.header.title">Privacy Policy</h1>
-    <p data-i18n="privacy.header.subtitle">Personal data protection and processing</p>
-  </div>
-
-  <!-- Data Protection Section - Special -->
-  <div class="data-protection-section">
-    <h2 data-i18n="privacy.commitment.title">🔐 Data Protection Commitment</h2>
-    <p>
-      <span data-i18n="privacy.commitment.text">At <strong>StockSip</strong>, we are committed to protecting and respecting your privacy in accordance with the strictest data protection regulations, including the</span>
-      <span class="gdpr-reference" data-i18n="privacy.commitment.gdpr">GDPR</span>
-      <span data-i18n="privacy.commitment.laws">and applicable local laws.</span>
-    </p>
-
-    <ul>
-      <li data-i18n="privacy.commitment.list.security">We implement state-of-the-art security measures</li>
-      <li data-i18n="privacy.commitment.list.standards">We comply with international protection standards</li>
-      <li data-i18n="privacy.commitment.list.transparency">We guarantee complete transparency in data handling</li>
-      <li data-i18n="privacy.commitment.list.rights">We respect all your rights as a data subject</li>
-    </ul>
-  </div>
-
-  <!-- Information Collection Section -->
-  <div class="privacy-section">
-    <h2 data-i18n="privacy.collection.title">📊 Information We Collect</h2>
-
-    <h3 data-i18n="privacy.collection.personal.title">Personal Information</h3>
-    <p data-i18n="privacy.collection.personal.description">We collect the following personal information when you use our services:</p>
-    <ul>
-      <li><strong data-i18n="privacy.collection.personal.registration.label">Registration data:</strong> <span data-i18n="privacy.collection.personal.registration.details">Name, surname, email address</span></li>
-      <li><strong data-i18n="privacy.collection.personal.profile.label">Profile information:</strong> <span data-i18n="privacy.collection.personal.profile.details">Profile picture, user preferences</span></li>
-      <li><strong data-i18n="privacy.collection.personal.financial.label">Financial data:</strong> <span data-i18n="privacy.collection.personal.financial.details">Information about your investments and portfolio (anonymized)</span></li>
-      <li><strong data-i18n="privacy.collection.personal.contact.label">Contact information:</strong> <span data-i18n="privacy.collection.personal.contact.details">Phone number (optional)</span></li>
-    </ul>
-
-    <h3 data-i18n="privacy.collection.technical.title">Technical Information</h3>
-    <ul>
-      <li><strong data-i18n="privacy.collection.technical.browsing.label">Browsing data:</strong> <span data-i18n="privacy.collection.technical.browsing.details">IP address, browser type, operating system</span></li>
-      <li><strong data-i18n="privacy.collection.technical.cookies.label">Cookies and similar technologies:</strong> <span data-i18n="privacy.collection.technical.cookies.details">To improve user experience</span></li>
-      <li><strong data-i18n="privacy.collection.technical.logs.label">Activity logs:</strong> <span data-i18n="privacy.collection.technical.logs.details">Actions performed in the application</span></li>
-      <li><strong data-i18n="privacy.collection.technical.performance.label">Performance data:</strong> <span data-i18n="privacy.collection.technical.performance.details">Application usage metrics</span></li>
-    </ul>
-
-    <div class="warning-box">
-      <strong data-i18n="privacy.collection.warning.label">Important:</strong>
-      <span data-i18n="privacy.collection.warning.text">We never collect sensitive financial information such as bank account numbers, broker passwords, or credit card data.</span>
-    </div>
-  </div>
-
-  <!-- Data Usage Section -->
-  <div class="privacy-section">
-    <h2 data-i18n="privacy.usage.title">🎯 How We Use Your Information</h2>
-
-    <p data-i18n="privacy.usage.description">We use the collected information for the following legitimate purposes:</p>
-
-    <h3 data-i18n="privacy.usage.service.title">Service Provision</h3>
-    <ul>
-      <li data-i18n="privacy.usage.service.analysis">Provide personalized investment analysis</li>
-      <li data-i18n="privacy.usage.service.recommendations">Generate recommendations based on your risk profile</li>
-      <li data-i18n="privacy.usage.service.maintenance">Maintain and improve StockSip functionality</li>
-      <li data-i18n="privacy.usage.service.support">Offer technical support and customer service</li>
-    </ul>
-
-    <h3 data-i18n="privacy.usage.communication.title">Communications</h3>
-    <ul>
-      <li data-i18n="privacy.usage.communication.notifications">Send you notifications about your account and service</li>
-      <li data-i18n="privacy.usage.communication.features">Inform you about new features</li>
-      <li data-i18n="privacy.usage.communication.inquiries">Respond to your queries and requests</li>
-      <li data-i18n="privacy.usage.communication.educational">Send you relevant educational content (with your consent)</li>
-    </ul>
-
-    <h3 data-i18n="privacy.usage.improvement.title">Service Improvement</h3>
-    <ul>
-      <li data-i18n="privacy.usage.improvement.patterns">Analyze usage patterns to optimize the platform</li>
-      <li data-i18n="privacy.usage.improvement.features">Develop new features</li>
-      <li data-i18n="privacy.usage.improvement.research">Conduct research and market analysis</li>
-      <li data-i18n="privacy.usage.improvement.security">Ensure security and prevent fraud</li>
-    </ul>
-  </div>
-
-  <!-- Data Sharing Section -->
-  <div class="privacy-section">
-    <h2 data-i18n="privacy.sharing.title">🤝 Information Sharing</h2>
-
-    <p><strong data-i18n="privacy.sharing.principle.label">Fundamental principle:</strong> <span data-i18n="privacy.sharing.principle.text">We do not sell, rent, or commercialize your personal information to third parties.</span></p>
-
-    <h3 data-i18n="privacy.sharing.circumstances.title">Limited Sharing Circumstances</h3>
-    <ul>
-      <li><strong data-i18n="privacy.sharing.circumstances.providers.label">Service providers:</strong> <span data-i18n="privacy.sharing.circumstances.providers.details">Technical partners who help us operate the platform (under strict confidentiality agreements)</span></li>
-      <li><strong data-i18n="privacy.sharing.circumstances.legal.label">Legal compliance:</strong> <span data-i18n="privacy.sharing.circumstances.legal.details">When required by competent authorities</span></li>
-      <li><strong data-i18n="privacy.sharing.circumstances.protection.label">Rights protection:</strong> <span data-i18n="privacy.sharing.circumstances.protection.details">To protect our legal rights or those of our users</span></li>
-      <li><strong data-i18n="privacy.sharing.circumstances.transfers.label">Business transfers:</strong> <span data-i18n="privacy.sharing.circumstances.transfers.details">In case of merger, acquisition, or sale (prior notification)</span></li>
-    </ul>
-
-    <div class="warning-box">
-      <strong data-i18n="privacy.sharing.guarantee.label">Guarantee:</strong>
-      <span data-i18n="privacy.sharing.guarantee.text">All third parties with access to your information are contractually obligated to maintain the same level of protection as we do.</span>
-    </div>
-  </div>
-
-  <!-- Data Security Section -->
-  <div class="privacy-section">
-    <h2 data-i18n="privacy.security.title">🛡️ Data Security</h2>
-
-    <p data-i18n="privacy.security.description">We implement multiple layers of security to protect your information:</p>
-
-    <h3 data-i18n="privacy.security.technical.title">Technical Measures</h3>
-    <ul>
-      <li><strong data-i18n="privacy.security.technical.encryption.label">Encryption:</strong> <span data-i18n="privacy.security.technical.encryption.details">All information is transmitted using SSL/TLS encryption</span></li>
-      <li><strong data-i18n="privacy.security.technical.storage.label">Secure storage:</strong> <span data-i18n="privacy.security.technical.storage.details">Data is stored in encrypted databases with restricted access</span></li>
-      <li><strong data-i18n="privacy.security.technical.authentication.label">Two-factor authentication:</strong> <span data-i18n="privacy.security.technical.authentication.details">Available for all user accounts</span></li>
-      <li><strong data-i18n="privacy.security.technical.monitoring.label">Continuous monitoring:</strong> <span data-i18n="privacy.security.technical.monitoring.details">24/7 security monitoring and threat detection</span></li>
-    </ul>
-
-    <h3 data-i18n="privacy.security.organizational.title">Organizational Measures</h3>
-    <ul>
-      <li><strong data-i18n="privacy.security.organizational.access.label">Limited access:</strong> <span data-i18n="privacy.security.organizational.access.details">Only authorized personnel have access to personal data</span></li>
-      <li><strong data-i18n="privacy.security.organizational.training.label">Staff training:</strong> <span data-i18n="privacy.security.organizational.training.details">Regular privacy and security training for all employees</span></li>
-      <li><strong data-i18n="privacy.security.organizational.audits.label">Security audits:</strong> <span data-i18n="privacy.security.organizational.audits.details">Regular internal and external security assessments</span></li>
-      <li><strong data-i18n="privacy.security.organizational.policies.label">Privacy policies:</strong> <span data-i18n="privacy.security.organizational.policies.details">Comprehensive data protection procedures and protocols</span></li>
-    </ul>
-  </div>
-
-  <!-- Data Retention Section -->
-  <div class="privacy-section">
-    <h2 data-i18n="privacy.retention.title">⏰ Data Retention</h2>
-
-    <p data-i18n="privacy.retention.description">We retain your personal data only for as long as necessary to fulfill the purposes outlined in this policy:</p>
-
-    <ul>
-      <li><strong data-i18n="privacy.retention.account.label">Account data:</strong> <span data-i18n="privacy.retention.account.details">Retained while your account is active and for 12 months after account closure</span></li>
-      <li><strong data-i18n="privacy.retention.financial.label">Financial information:</strong> <span data-i18n="privacy.retention.financial.details">Retained for 7 years as required by financial regulations</span></li>
-      <li><strong data-i18n="privacy.retention.technical.label">Technical logs:</strong> <span data-i18n="privacy.retention.technical.details">Retained for 90 days for security and troubleshooting purposes</span></li>
-      <li><strong data-i18n="privacy.retention.marketing.label">Marketing data:</strong> <span data-i18n="privacy.retention.marketing.details">Retained until you withdraw consent or for 3 years of inactivity</span></li>
-    </ul>
-  </div>
-
-  <!-- User Rights Section -->
-  <div class="privacy-section">
-    <h2 data-i18n="privacy.rights.title">⚖️ Your Rights</h2>
-
-    <p data-i18n="privacy.rights.description">Under data protection laws, you have the following rights regarding your personal data:</p>
-
-    <div class="rights-grid">
-      <div class="right-item">
-        <h4 data-i18n="privacy.rights.access.title">Right to Access</h4>
-        <p data-i18n="privacy.rights.access.description">Request a copy of the personal data we hold about you</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="privacy_page_title">StockSip — Política de Privacidad</title>
+    <meta name="description" content="Política de privacidad de StockSip." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/styles/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="StockSip">
+          <svg viewBox="0 0 220 36" role="img" aria-label="StockSip">
+            <text x="0" y="26" font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="700" fill="#ffffff">StockSip</text>
+            <circle cx="206" cy="20" r="4" fill="#e53e3e" />
+          </svg>
+        </a>
+        <div class="header-actions">
+          <div class="lang" aria-label="Selector de idioma">
+            <button class="lang-btn" type="button" data-lang="es">ES</button>
+            <button class="lang-btn" type="button" data-lang="en">EN</button>
+          </div>
+          <a class="btn btn-primary" href="index.html#plans">Empezar</a>
+        </div>
       </div>
+    </header>
 
-      <div class="right-item">
-        <h4 data-i18n="privacy.rights.rectification.title">Right to Rectification</h4>
-        <p data-i18n="privacy.rights.rectification.description">Request correction of inaccurate or incomplete data</p>
+    <main class="bg-bottom legal">
+      <div class="container">
+        <article class="glass">
+          <h1 data-i18n="privacy_title">Política de Privacidad</h1>
+          <p data-i18n="privacy_intro">At StockSip, we are committed to protecting and respecting your privacy in accordance with the strictest data protection regulations, including the GDPR and applicable local laws.</p>
+
+          <h2 data-i18n="privacy_commitment_title">Data Protection Commitment</h2>
+          <ul>
+            <li data-i18n="privacy_commitment_1">We implement state-of-the-art security measures.</li>
+            <li data-i18n="privacy_commitment_2">We comply with international protection standards.</li>
+            <li data-i18n="privacy_commitment_3">We guarantee transparency in data handling.</li>
+            <li data-i18n="privacy_commitment_4">We respect your rights as a data subject.</li>
+          </ul>
+
+          <h2 data-i18n="privacy_collect_title">Information We Collect</h2>
+
+          <h3 data-i18n="privacy_personal_title">Personal Information</h3>
+          <p data-i18n="privacy_personal_desc">We collect the following personal information when you use our services:</p>
+          <ul>
+            <li data-i18n="privacy_personal_1">Registration data: Name, surname, email address.</li>
+            <li data-i18n="privacy_personal_2">Profile information: Profile picture, user preferences.</li>
+            <li data-i18n="privacy_personal_3">Financial data: Information about your investments and portfolio (anonymized).</li>
+            <li data-i18n="privacy_personal_4">Contact information: Phone number (optional).</li>
+          </ul>
+
+          <h3 data-i18n="privacy_tech_title">Technical Information</h3>
+          <ul>
+            <li data-i18n="privacy_tech_1">Browsing data: IP address, browser type, operating system.</li>
+            <li data-i18n="privacy_tech_2">Cookies and similar technologies: To improve user experience.</li>
+            <li data-i18n="privacy_tech_3">Activity logs: Actions performed in the application.</li>
+            <li data-i18n="privacy_tech_4">Performance data: Application usage metrics.</li>
+          </ul>
+
+          <p data-i18n="privacy_important">Important: We never collect sensitive financial information such as bank account numbers, broker passwords, or credit card data.</p>
+
+          <h2 data-i18n="privacy_use_title">How We Use Your Information</h2>
+          <p data-i18n="privacy_use_desc">We use the collected information for the following legitimate purposes:</p>
+
+          <h3 data-i18n="privacy_use_service_title">Service Provision</h3>
+          <ul>
+            <li data-i18n="privacy_use_service_1">Provide personalized investment analysis.</li>
+            <li data-i18n="privacy_use_service_2">Generate recommendations based on your risk profile.</li>
+            <li data-i18n="privacy_use_service_3">Maintain and improve StockSip functionality.</li>
+            <li data-i18n="privacy_use_service_4">Offer technical support and customer service.</li>
+          </ul>
+
+          <h3 data-i18n="privacy_use_comm_title">Communications</h3>
+          <ul>
+            <li data-i18n="privacy_use_comm_1">Send you notifications about your account and service.</li>
+            <li data-i18n="privacy_use_comm_2">Inform you about new features.</li>
+            <li data-i18n="privacy_use_comm_3">Respond to your queries and requests.</li>
+            <li data-i18n="privacy_use_comm_4">Send you relevant educational content (with your consent).</li>
+          </ul>
+
+          <h3 data-i18n="privacy_use_improve_title">Service Improvement</h3>
+          <ul>
+            <li data-i18n="privacy_use_improve_1">Analyze usage patterns to optimize the platform.</li>
+            <li data-i18n="privacy_use_improve_2">Develop new features.</li>
+            <li data-i18n="privacy_use_improve_3">Conduct research and market analysis.</li>
+            <li data-i18n="privacy_use_improve_4">Ensure security and prevent fraud.</li>
+          </ul>
+
+          <h2 data-i18n="privacy_share_title">Information Sharing</h2>
+          <p data-i18n="privacy_share_principle">Fundamental principle: We do not sell, rent, or commercialize your personal information to third parties.</p>
+
+          <h3 data-i18n="privacy_share_limited_title">Limited Sharing Circumstances</h3>
+          <ul>
+            <li data-i18n="privacy_share_1">Service providers: Technical partners who help us operate the platform (under strict confidentiality agreements).</li>
+            <li data-i18n="privacy_share_2">Legal compliance: When required by competent authorities.</li>
+            <li data-i18n="privacy_share_3">Rights protection: To protect our legal rights or those of our users.</li>
+            <li data-i18n="privacy_share_4">Business transfers: In case of merger, acquisition, or sale (prior notification).</li>
+          </ul>
+
+          <p data-i18n="privacy_share_guarantee">Guarantee: All third parties with access to your information are contractually obligated to maintain the same level of protection as we do.</p>
+
+          <h2 data-i18n="privacy_security_title">Data Security</h2>
+          <p data-i18n="privacy_security_desc">We implement multiple layers of security to protect your information:</p>
+
+          <h3 data-i18n="privacy_security_tech_title">Technical Measures</h3>
+          <ul>
+            <li data-i18n="privacy_security_tech_1">Encryption: All information is transmitted using SSL/TLS encryption.</li>
+            <li data-i18n="privacy_security_tech_2">Secure storage: Data is stored in encrypted databases with restricted access.</li>
+            <li data-i18n="privacy_security_tech_3">Two-factor authentication: Available for all user accounts.</li>
+            <li data-i18n="privacy_security_tech_4">Continuous monitoring: 24/7 security monitoring and threat detection.</li>
+          </ul>
+
+          <h3 data-i18n="privacy_security_org_title">Organizational Measures</h3>
+          <ul>
+            <li data-i18n="privacy_security_org_1">Limited access: Only authorized personnel have access to personal data.</li>
+            <li data-i18n="privacy_security_org_2">Staff training: Regular privacy and security training for all employees.</li>
+            <li data-i18n="privacy_security_org_3">Security audits: Regular internal and external security assessments.</li>
+            <li data-i18n="privacy_security_org_4">Privacy policies: Comprehensive data protection procedures and protocols.</li>
+          </ul>
+
+          <h2 data-i18n="privacy_retention_title">Data Retention</h2>
+          <p data-i18n="privacy_retention_desc">We retain your personal data only for as long as necessary to fulfill the purposes outlined in this policy:</p>
+          <ul>
+            <li data-i18n="privacy_retention_1">Account data: Retained while your account is active and for 12 months after account closure.</li>
+            <li data-i18n="privacy_retention_2">Financial information: Retained for 7 years as required by financial regulations.</li>
+            <li data-i18n="privacy_retention_3">Technical logs: Retained for 90 days for security and troubleshooting purposes.</li>
+            <li data-i18n="privacy_retention_4">Marketing data: Retained until you withdraw consent or for 3 years of inactivity.</li>
+          </ul>
+
+          <h2 data-i18n="privacy_rights_title">Your Rights</h2>
+          <p data-i18n="privacy_rights_desc">Under data protection laws, you have the following rights regarding your personal data:</p>
+          <ul>
+            <li data-i18n="privacy_rights_1">Right to Access: Request a copy of the personal data we hold about you.</li>
+            <li data-i18n="privacy_rights_2">Right to Rectification: Request correction of inaccurate or incomplete data.</li>
+            <li data-i18n="privacy_rights_3">Right to Erasure: Request deletion of your personal data under certain circumstances.</li>
+            <li data-i18n="privacy_rights_4">Right to Restriction: Request limitation of processing of your personal data.</li>
+            <li data-i18n="privacy_rights_5">Right to Data Portability: Request transfer of your data to another service provider.</li>
+            <li data-i18n="privacy_rights_6">Right to Object: Object to processing of your data for certain purposes.</li>
+          </ul>
+
+          <p>
+            <span data-i18n="privacy_rights_contact_prefix">To exercise any of these rights, please contact us at </span>
+            <a href="mailto:privacy@stocksip.com">privacy@stocksip.com</a>
+            <span data-i18n="privacy_rights_contact_suffix">.</span>
+          </p>
+
+          <h2 data-i18n="privacy_cookies_title">Cookies and Tracking Technologies</h2>
+          <p data-i18n="privacy_cookies_desc">We use cookies and similar technologies to enhance your experience on our platform:</p>
+          <h3 data-i18n="privacy_cookies_essential_title">Essential Cookies</h3>
+          <p data-i18n="privacy_cookies_essential_desc">Necessary for the basic functionality of our website and cannot be disabled.</p>
+          <h3 data-i18n="privacy_cookies_analytics_title">Analytics Cookies</h3>
+          <p data-i18n="privacy_cookies_analytics_desc">Help us understand how visitors interact with our website by collecting and reporting information anonymously.</p>
+          <h3 data-i18n="privacy_cookies_functional_title">Functional Cookies</h3>
+          <p data-i18n="privacy_cookies_functional_desc">Enable enhanced functionality and personalization, such as remembering your preferences.</p>
+          <h3 data-i18n="privacy_cookies_marketing_title">Marketing Cookies</h3>
+          <p data-i18n="privacy_cookies_marketing_desc">Used to track visitors across websites to display relevant and engaging advertisements.</p>
+          <p data-i18n="privacy_cookies_control">You can control and/or delete cookies as you wish through your browser settings. However, removing certain cookies may affect the functionality of our service.</p>
+
+          <h2 data-i18n="privacy_transfers_title">International Data Transfers</h2>
+          <p data-i18n="privacy_transfers_desc">Your personal data may be transferred to and processed in countries other than your country of residence. We ensure that:</p>
+          <ul>
+            <li data-i18n="privacy_transfers_1">All transfers are to countries with adequate data protection laws or under appropriate safeguards.</li>
+            <li data-i18n="privacy_transfers_2">We have appropriate agreements in place with third parties that receive your data.</li>
+            <li data-i18n="privacy_transfers_3">All transfers comply with applicable data protection regulations.</li>
+            <li data-i18n="privacy_transfers_4">Your data receives the same level of protection regardless of location.</li>
+          </ul>
+
+          <h2 data-i18n="privacy_updates_title">Policy Updates</h2>
+          <p data-i18n="privacy_updates_desc">We may update this Privacy Policy from time to time to reflect changes in our practices or applicable laws. When we do:</p>
+          <ul>
+            <li data-i18n="privacy_updates_1">We will notify you of significant changes via email or through our platform.</li>
+            <li data-i18n="privacy_updates_2">The “Last Updated” date at the top of this policy will be revised.</li>
+            <li data-i18n="privacy_updates_3">We encourage you to review this policy periodically.</li>
+            <li data-i18n="privacy_updates_4">Continued use of our services after changes indicates acceptance of the updated policy.</li>
+          </ul>
+        </article>
       </div>
+    </main>
 
-      <div class="right-item">
-        <h4 data-i18n="privacy.rights.erasure.title">Right to Erasure</h4>
-        <p data-i18n="privacy.rights.erasure.description">Request deletion of your personal data under certain circumstances</p>
+    <footer class="bg-top">
+      <div class="container">
+        <div class="footer-divider" style="margin-top: 0"></div>
+        <div class="footer-bottom">
+          <span>© <span id="year"></span> StockSip</span>
+          <div class="footer-links">
+            <a href="terms_conditions.html">Términos</a>
+            <a href="privacy.html">Privacidad</a>
+          </div>
+        </div>
       </div>
+    </footer>
 
-      <div class="right-item">
-        <h4 data-i18n="privacy.rights.restriction.title">Right to Restriction</h4>
-        <p data-i18n="privacy.rights.restriction.description">Request limitation of processing of your personal data</p>
-      </div>
-
-      <div class="right-item">
-        <h4 data-i18n="privacy.rights.portability.title">Right to Data Portability</h4>
-        <p data-i18n="privacy.rights.portability.description">Request transfer of your data to another service provider</p>
-      </div>
-
-      <div class="right-item">
-        <h4 data-i18n="privacy.rights.object.title">Right to Object</h4>
-        <p data-i18n="privacy.rights.object.description">Object to processing of your data for certain purposes</p>
-      </div>
-    </div>
-
-    <p data-i18n="privacy.rights.exercise">To exercise any of these rights, please contact us at <a href="mailto:privacy@stocksip.com">privacy@stocksip.com</a></p>
-  </div>
-
-  <!-- Cookies Section -->
-  <div class="privacy-section">
-    <h2 data-i18n="privacy.cookies.title">🍪 Cookies and Tracking Technologies</h2>
-
-    <p data-i18n="privacy.cookies.description">We use cookies and similar technologies to enhance your experience on our platform:</p>
-
-    <h3 data-i18n="privacy.cookies.essential.title">Essential Cookies</h3>
-    <p data-i18n="privacy.cookies.essential.description">Necessary for the basic functionality of our website and cannot be disabled.</p>
-
-    <h3 data-i18n="privacy.cookies.analytics.title">Analytics Cookies</h3>
-    <p data-i18n="privacy.cookies.analytics.description">Help us understand how visitors interact with our website by collecting and reporting information anonymously.</p>
-
-    <h3 data-i18n="privacy.cookies.functional.title">Functional Cookies</h3>
-    <p data-i18n="privacy.cookies.functional.description">Enable enhanced functionality and personalization, such as remembering your preferences.</p>
-
-    <h3 data-i18n="privacy.cookies.marketing.title">Marketing Cookies</h3>
-    <p data-i18n="privacy.cookies.marketing.description">Used to track visitors across websites to display relevant and engaging advertisements.</p>
-
-    <p data-i18n="privacy.cookies.control">You can control and/or delete cookies as you wish through your browser settings. However, removing certain cookies may affect the functionality of our service.</p>
-  </div>
-
-  <!-- International Transfers Section -->
-  <div class="privacy-section">
-    <h2 data-i18n="privacy.transfers.title">🌍 International Data Transfers</h2>
-
-    <p data-i18n="privacy.transfers.description">Your personal data may be transferred to and processed in countries other than your country of residence. We ensure that:</p>
-
-    <ul>
-      <li data-i18n="privacy.transfers.adequacy">All transfers are to countries with adequate data protection laws or under appropriate safeguards</li>
-      <li data-i18n="privacy.transfers.agreements">We have appropriate agreements in place with third parties that receive your data</li>
-      <li data-i18n="privacy.transfers.compliance">All transfers comply with applicable data protection regulations</li>
-      <li data-i18n="privacy.transfers.protection">Your data receives the same level of protection regardless of location</li>
-    </ul>
-  </div>
-
-  <!-- Updates Section -->
-  <div class="privacy-section">
-    <h2 data-i18n="privacy.updates.title">📝 Policy Updates</h2>
-
-    <p data-i18n="privacy.updates.description">We may update this Privacy Policy from time to time to reflect changes in our practices or applicable laws. When we do:</p>
-
-    <ul>
-      <li data-i18n="privacy.updates.notification">We will notify you of significant changes via email or through our platform</li>
-      <li data-i18n="privacy.updates.date">The "Last Updated" date at the top of this policy will be revised</li>
-      <li data-i18n="privacy.updates.review">We encourage you to review this policy periodically</li>
-      <li data-i18n="privacy.updates.consent">Continued use of our services after changes indicates acceptance of the updated policy</li>
-    </ul>
-  </div>
-</div>
-
-<script src="assets/scripts/i18n.js"></script>
-
-</body>
+    <script src="assets/scripts/i18n.js"></script>
+    <script src="assets/scripts/script.js"></script>
+  </body>
 </html>
