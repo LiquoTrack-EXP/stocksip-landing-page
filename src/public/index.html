@@ -4,11 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>StockSip — Gestión de inventario inteligente</title>
-    <meta name="description" content="StockSip es una app de gestión de inventario para licorerías: menos quiebres, más ventas, control total." />
+    <meta
+      name="description"
+      content="StockSip es una app de gestión de inventario para licorerías: menos quiebres, más ventas, control total."
+    />
     <link rel="icon" type="image/x-icon" href="assets/images/stocksip.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="assets/styles/styles.css" />
   </head>
   <body>
@@ -34,10 +40,27 @@
             <button class="lang-btn" type="button" data-lang="en">EN</button>
           </div>
 
-          <a class="btn btn-primary" href="#plans" data-i18n="header_start">Empezar</a>
+          <a
+            class="btn btn-primary"
+            href="download.html"
+            data-i18n="header_start"
+            >Empezar</a
+          >
 
-          <button class="hamburger" type="button" aria-label="Abrir menú" aria-controls="drawer" aria-expanded="false">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <button
+            class="hamburger"
+            type="button"
+            aria-label="Abrir menú"
+            aria-controls="drawer"
+            aria-expanded="false"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            >
               <path d="M4 7h16" />
               <path d="M4 12h16" />
               <path d="M4 17h16" />
@@ -48,11 +71,28 @@
     </header>
 
     <div class="drawer-overlay" data-drawer-overlay></div>
-    <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Menú">
+    <aside
+      class="drawer"
+      id="drawer"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Menú"
+    >
       <div class="drawer-top">
         <span style="font-weight: 700">Menu</span>
-        <button class="drawer-close" type="button" aria-label="Cerrar menú" data-drawer-close>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <button
+          class="drawer-close"
+          type="button"
+          aria-label="Cerrar menú"
+          data-drawer-close
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+          >
             <path d="M6 6l12 12" />
             <path d="M18 6l-12 12" />
           </svg>
@@ -61,8 +101,12 @@
       <nav aria-label="Navegación móvil">
         <a href="#home" data-i18n="nav_home" data-drawer-link>Home</a>
         <a href="#product" data-i18n="nav_product" data-drawer-link>Producto</a>
-        <a href="#features" data-i18n="nav_features" data-drawer-link>Características</a>
-        <a href="#benefits" data-i18n="nav_benefits" data-drawer-link>Beneficios</a>
+        <a href="#features" data-i18n="nav_features" data-drawer-link
+          >Características</a
+        >
+        <a href="#benefits" data-i18n="nav_benefits" data-drawer-link
+          >Beneficios</a
+        >
         <a href="#faq" data-i18n="nav_faq" data-drawer-link>FAQ</a>
         <a href="#contact" data-i18n="nav_contact" data-drawer-link>Contacto</a>
       </nav>
@@ -72,43 +116,105 @@
         <button class="lang-btn" type="button" data-lang="en">EN</button>
       </div>
 
-      <a class="btn btn-primary" href="#plans" data-i18n="header_start" data-drawer-link>Empezar</a>
+      <a
+        class="btn btn-primary"
+        href="#plans"
+        data-i18n="header_start"
+        data-drawer-link
+        >Empezar</a
+      >
     </aside>
 
     <main>
       <section id="home" class="section hero bg-top">
         <div class="container hero-grid">
           <div>
-            <h1 class="hero-headline" aria-label="Gestión de inventario inteligente">
-              <span class="word" style="--i: 0" data-i18n="hero_word_1">Gestión</span>
-              <span class="word" style="--i: 1" data-i18n="hero_word_2">de</span>
-              <span class="word" style="--i: 2" data-i18n="hero_word_3">inventario</span>
-              <span class="word" style="--i: 3" data-i18n="hero_word_4">inteligente</span>
+            <h1
+              class="hero-headline"
+              aria-label="Gestión de inventario inteligente"
+            >
+              <span class="word" style="--i: 0" data-i18n="hero_word_1"
+                >Gestión</span
+              >
+              <span class="word" style="--i: 1" data-i18n="hero_word_2"
+                >de</span
+              >
+              <span class="word" style="--i: 2" data-i18n="hero_word_3"
+                >inventario</span
+              >
+              <span class="word" style="--i: 3" data-i18n="hero_word_4"
+                >inteligente</span
+              >
             </h1>
 
-            <p class="hero-sub" data-i18n="hero_sub">Controla stock en tiempo real, reduce quiebres y ordena con datos. Diseñado para licorerías.</p>
+            <p class="hero-sub" data-i18n="hero_sub">
+              Controla stock en tiempo real, reduce quiebres y ordena con datos.
+              Diseñado para licorerías.
+            </p>
 
             <div class="hero-cta" style="margin-top: 1.5rem">
-              <a class="btn btn-primary" href="#plans" data-i18n="hero_cta_primary">Ver planes</a>
-              <a class="btn btn-secondary" href="#features" data-i18n="hero_cta_secondary">Cómo funciona</a>
+              <a
+                class="btn btn-primary"
+                href="#plans"
+                data-i18n="hero_cta_primary"
+                >Ver planes</a
+              >
+              <a
+                class="btn btn-secondary"
+                href="#features"
+                data-i18n="hero_cta_secondary"
+                >Cómo funciona</a
+              >
             </div>
           </div>
 
           <div class="stats" data-counters>
             <div class="stat">
-              <div class="value" data-counter data-target="500" data-prefix="" data-suffix="+">0</div>
+              <div
+                class="value"
+                data-counter
+                data-target="500"
+                data-prefix=""
+                data-suffix="+"
+              >
+                0
+              </div>
               <div class="label" data-i18n="stat_1">licorerías</div>
             </div>
             <div class="stat">
-              <div class="value" data-counter data-target="99" data-prefix="" data-suffix="%">0</div>
+              <div
+                class="value"
+                data-counter
+                data-target="99"
+                data-prefix=""
+                data-suffix="%"
+              >
+                0
+              </div>
               <div class="label" data-i18n="stat_2">satisfacción</div>
             </div>
             <div class="stat">
-              <div class="value" data-counter data-target="35" data-prefix="" data-suffix="%">0</div>
+              <div
+                class="value"
+                data-counter
+                data-target="35"
+                data-prefix=""
+                data-suffix="%"
+              >
+                0
+              </div>
               <div class="label" data-i18n="stat_3">menos quiebres</div>
             </div>
             <div class="stat">
-              <div class="value" data-counter data-target="20" data-prefix="+" data-suffix="%">0</div>
+              <div
+                class="value"
+                data-counter
+                data-target="20"
+                data-prefix="+"
+                data-suffix="%"
+              >
+                0
+              </div>
               <div class="label" data-i18n="stat_4">ventas</div>
             </div>
           </div>
@@ -119,42 +225,99 @@
         <div class="container">
           <div class="section-title">
             <span class="kicker" data-i18n="about_kicker">Enfoque</span>
-            <h2 id="about-title" data-i18n="about_title">Misión · Visión · Valores</h2>
+            <h2 id="about-title" data-i18n="about_title">
+              Misión · Visión · Valores
+            </h2>
           </div>
 
           <div class="cards-3">
-            <article class="glass card animate-fade-up" data-stagger style="--i: 0">
-              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <article
+              class="glass card animate-fade-up"
+              data-stagger
+              style="--i: 0"
+            >
+              <svg
+                class="icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
                 <path d="M12 20V10" />
                 <path d="M18 20V4" />
                 <path d="M6 20v-6" />
               </svg>
               <h3 data-i18n="about_mission_t">Misión</h3>
-              <p data-i18n="about_mission_p">Simplificar el control de inventario con decisiones basadas en datos, sin fricción.</p>
+              <p data-i18n="about_mission_p">
+                Simplificar el control de inventario con decisiones basadas en
+                datos, sin fricción.
+              </p>
             </article>
 
-            <article class="glass card animate-fade-up" data-stagger style="--i: 1">
-              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <article
+              class="glass card animate-fade-up"
+              data-stagger
+              style="--i: 1"
+            >
+              <svg
+                class="icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
                 <path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z" />
                 <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
               </svg>
               <h3 data-i18n="about_vision_t">Visión</h3>
-              <p data-i18n="about_vision_p">Que cada licorería opere con claridad: stock exacto, pedidos inteligentes y margen mejorado.</p>
+              <p data-i18n="about_vision_p">
+                Que cada licorería opere con claridad: stock exacto, pedidos
+                inteligentes y margen mejorado.
+              </p>
             </article>
 
-            <article class="glass card animate-fade-up" data-stagger style="--i: 2">
-              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M12 21s-7-4.4-7-11a4 4 0 0 1 7-2.2A4 4 0 0 1 19 10c0 6.6-7 11-7 11Z" />
+            <article
+              class="glass card animate-fade-up"
+              data-stagger
+              style="--i: 2"
+            >
+              <svg
+                class="icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 21s-7-4.4-7-11a4 4 0 0 1 7-2.2A4 4 0 0 1 19 10c0 6.6-7 11-7 11Z"
+                />
               </svg>
               <h3 data-i18n="about_values_t">Valores</h3>
-              <p data-i18n="about_values_p">Precisión, simplicidad y enfoque en el negocio: lo esencial primero, siempre.</p>
+              <p data-i18n="about_values_p">
+                Precisión, simplicidad y enfoque en el negocio: lo esencial
+                primero, siempre.
+              </p>
             </article>
           </div>
         </div>
       </section>
 
       <section class="section mid-cta bg-top" aria-labelledby="mid-cta-title">
-        <svg class="float-particles" viewBox="0 0 1000 300" preserveAspectRatio="none" aria-hidden="true">
+        <svg
+          class="float-particles"
+          viewBox="0 0 1000 300"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
           <circle cx="120" cy="90" r="18" />
           <circle cx="260" cy="210" r="26" />
           <circle cx="430" cy="110" r="20" />
@@ -163,18 +326,28 @@
           <circle cx="900" cy="200" r="18" />
         </svg>
         <div class="container inner">
-          <h2 id="mid-cta-title" data-i18n="mid_cta_title">Inventario claro. Decisiones rápidas.</h2>
+          <h2 id="mid-cta-title" data-i18n="mid_cta_title">
+            Inventario claro. Decisiones rápidas.
+          </h2>
           <div>
-            <a class="btn btn-primary" href="#product" data-i18n="mid_cta_btn">Ver el producto</a>
+            <a class="btn btn-primary" href="#product" data-i18n="mid_cta_btn"
+              >Ver el producto</a
+            >
           </div>
         </div>
       </section>
 
-      <section id="features" class="section bg-bottom" aria-labelledby="features-title">
+      <section
+        id="features"
+        class="section bg-bottom"
+        aria-labelledby="features-title"
+      >
         <div class="container">
           <div class="section-title">
             <span class="kicker" data-i18n="features_kicker">Producto</span>
-            <h2 id="features-title" data-i18n="features_title">Cómo funciona</h2>
+            <h2 id="features-title" data-i18n="features_title">
+              Cómo funciona
+            </h2>
           </div>
 
           <div class="steps">
@@ -185,14 +358,27 @@
               <div class="flip-wrap animate-scale" data-stagger style="--i: 0">
                 <div class="flip">
                   <div class="flip-face flip-front glass">
-                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <svg
+                      class="icon"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
                       <path d="M8 7h8" />
                       <path d="M8 11h8" />
                       <path d="M8 15h6" />
-                      <path d="M6 3h12a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" />
+                      <path
+                        d="M6 3h12a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z"
+                      />
                     </svg>
                     <h3 data-i18n="feat_1_t">Registra</h3>
-                    <p data-i18n="feat_1_p">Entradas, salidas y ajustes con trazabilidad simple.</p>
+                    <p data-i18n="feat_1_p">
+                      Entradas, salidas y ajustes con trazabilidad simple.
+                    </p>
                   </div>
                   <div class="flip-face flip-back glass">
                     <h3 data-i18n="feat_1_b_t">Resultados</h3>
@@ -211,14 +397,25 @@
               <div class="flip-wrap animate-scale" data-stagger style="--i: 1">
                 <div class="flip">
                   <div class="flip-face flip-front glass">
-                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <svg
+                      class="icon"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
                       <path d="M12 3v18" />
                       <path d="M3 12h18" />
                       <path d="M20 16a4 4 0 0 0-4 4" />
                       <path d="M8 20a4 4 0 0 0-4-4" />
                     </svg>
                     <h3 data-i18n="feat_2_t">Analiza</h3>
-                    <p data-i18n="feat_2_p">Indicadores claros para reponer a tiempo.</p>
+                    <p data-i18n="feat_2_p">
+                      Indicadores claros para reponer a tiempo.
+                    </p>
                   </div>
                   <div class="flip-face flip-back glass">
                     <h3 data-i18n="feat_2_b_t">Resultados</h3>
@@ -237,19 +434,32 @@
               <div class="flip-wrap animate-scale" data-stagger style="--i: 2">
                 <div class="flip">
                   <div class="flip-face flip-front glass">
-                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <svg
+                      class="icon"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
                       <path d="M7 17l10-10" />
                       <path d="M7 7h10v10" />
                     </svg>
                     <h3 data-i18n="feat_3_t">Optimiza</h3>
-                    <p data-i18n="feat_3_p">Pedidos inteligentes para crecer sin sobrestock.</p>
+                    <p data-i18n="feat_3_p">
+                      Pedidos inteligentes para crecer sin sobrestock.
+                    </p>
                   </div>
                   <div class="flip-face flip-back glass">
                     <h3 data-i18n="feat_3_b_t">Resultados</h3>
                     <ul>
                       <li data-i18n="feat_3_b_1">Menos quiebres</li>
                       <li data-i18n="feat_3_b_2">Compras más precisas</li>
-                      <li data-i18n="feat_3_b_3">Más ventas por disponibilidad</li>
+                      <li data-i18n="feat_3_b_3">
+                        Más ventas por disponibilidad
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -259,11 +469,17 @@
         </div>
       </section>
 
-      <section id="product" class="section bg-bottom" aria-labelledby="product-title">
+      <section
+        id="product"
+        class="section bg-bottom"
+        aria-labelledby="product-title"
+      >
         <div class="container">
           <div class="section-title">
             <span class="kicker" data-i18n="product_kicker">Interfaz</span>
-            <h2 id="product-title" data-i18n="product_title">Product showcase</h2>
+            <h2 id="product-title" data-i18n="product_title">
+              Product showcase
+            </h2>
           </div>
 
           <div class="carousel" data-carousel>
@@ -271,33 +487,75 @@
               <div class="carousel-track" data-carousel-track>
                 <div class="slide is-active" data-slide>
                   <div class="slide-inner glass">
-                    <img loading="lazy" alt="sign-in" src="./assets/images/login.png" />
+                    <img
+                      loading="lazy"
+                      alt="sign-in"
+                      src="./assets/images/login.png"
+                    />
                   </div>
                 </div>
                 <div class="slide" data-slide>
                   <div class="slide-inner glass">
-                    <img loading="lazy" alt="sign-up" src="./assets/images/register.png" />
+                    <img
+                      loading="lazy"
+                      alt="sign-up"
+                      src="./assets/images/register.png"
+                    />
                   </div>
                 </div>
                 <div class="slide" data-slide>
                   <div class="slide-inner glass">
-                    <img loading="lazy" alt="mobile" src="./assets/images/login-register.png" />
+                    <img
+                      loading="lazy"
+                      alt="mobile"
+                      src="./assets/images/login-register.png"
+                    />
                   </div>
                 </div>
               </div>
             </div>
 
             <div class="carousel-controls">
-              <button class="carousel-arrow" type="button" aria-label="Anterior" data-prev>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <button
+                class="carousel-arrow"
+                type="button"
+                aria-label="Anterior"
+                data-prev
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
                   <path d="M15 18l-6-6 6-6" />
                 </svg>
               </button>
 
-              <div class="dots" aria-label="Navegación del carrusel" data-dots></div>
+              <div
+                class="dots"
+                aria-label="Navegación del carrusel"
+                data-dots
+              ></div>
 
-              <button class="carousel-arrow" type="button" aria-label="Siguiente" data-next>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <button
+                class="carousel-arrow"
+                type="button"
+                aria-label="Siguiente"
+                data-next
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
                   <path d="M9 18l6-6-6-6" />
                 </svg>
               </button>
@@ -310,36 +568,78 @@
         <div class="container">
           <div class="section-title">
             <span class="kicker" data-i18n="team_kicker">Equipo</span>
-            <h2 id="team-title" data-i18n="team_title">Hecho por gente de producto</h2>
+            <h2 id="team-title" data-i18n="team_title">
+              Hecho por gente de producto
+            </h2>
           </div>
 
           <div class="team">
-            <article class="member glass animate-fade-up" data-stagger style="--i: 0">
-              <img loading="lazy" alt="Nicolas" src="./assets/images/member-nicolas.png" />
+            <article
+              class="member glass animate-fade-up"
+              data-stagger
+              style="--i: 0"
+            >
+              <img
+                loading="lazy"
+                alt="Nicolas"
+                src="./assets/images/member-nicolas.png"
+              />
               <div>
                 <div class="name">Nicolas</div>
-                <div class="role" data-i18n="team_1">Ingeniería de Software</div>
+                <div class="role" data-i18n="team_1">
+                  Ingeniería de Software
+                </div>
               </div>
             </article>
-            <article class="member glass animate-fade-up" data-stagger style="--i: 1">
-              <img loading="lazy" alt="Matias" src="./assets/images/member_matias.jpg" />
+            <article
+              class="member glass animate-fade-up"
+              data-stagger
+              style="--i: 1"
+            >
+              <img
+                loading="lazy"
+                alt="Matias"
+                src="./assets/images/member_matias.jpg"
+              />
               <div>
                 <div class="name">Matias</div>
-                <div class="role" data-i18n="team_2">Ingeniería de Software</div>
+                <div class="role" data-i18n="team_2">
+                  Ingeniería de Software
+                </div>
               </div>
             </article>
-            <article class="member glass animate-fade-up" data-stagger style="--i: 2">
-              <img loading="lazy" alt="Farid" src="./assets/images/member-farid.png" />
+            <article
+              class="member glass animate-fade-up"
+              data-stagger
+              style="--i: 2"
+            >
+              <img
+                loading="lazy"
+                alt="Farid"
+                src="./assets/images/member-farid.png"
+              />
               <div>
                 <div class="name">Farid</div>
-                <div class="role" data-i18n="team_3">Ingeniería de Software</div>
+                <div class="role" data-i18n="team_3">
+                  Ingeniería de Software
+                </div>
               </div>
             </article>
-            <article class="member glass animate-fade-up" data-stagger style="--i: 3">
-              <img loading="lazy" alt="Sergio" src="./assets/images/member-sergio.jpeg" />
+            <article
+              class="member glass animate-fade-up"
+              data-stagger
+              style="--i: 3"
+            >
+              <img
+                loading="lazy"
+                alt="Sergio"
+                src="./assets/images/member-sergio.jpeg"
+              />
               <div>
                 <div class="name">Sergio</div>
-                <div class="role" data-i18n="team_4">Ingeniería de Software</div>
+                <div class="role" data-i18n="team_4">
+                  Ingeniería de Software
+                </div>
               </div>
             </article>
           </div>
@@ -350,46 +650,108 @@
         <div class="container">
           <div class="section-title">
             <span class="kicker" data-i18n="video_kicker">Video</span>
-            <h2 id="video-section-title" data-i18n="video_section_title">Exploración de la aplicación</h2>
+            <h2 id="video-section-title" data-i18n="video_section_title">
+              Exploración de la aplicación
+            </h2>
           </div>
 
           <div class="video-container">
             <div class="video-wrapper glass animate-fade-up">
-              <iframe width="800" height="400" src="https://www.youtube.com/embed/UVUOSBgljZw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe
+                width="800"
+                height="400"
+                src="https://www.youtube.com/embed/m-t7KgaBsAs"
+                title="YouTube video player"
+                frameborder="0"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+              ></iframe>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="benefits" class="section bg-top" aria-labelledby="benefits-title">
+      <section
+        id="benefits"
+        class="section bg-top"
+        aria-labelledby="benefits-title"
+      >
         <div class="container">
           <div class="section-title">
-            <span class="kicker" style="color: rgba(255, 255, 255, 0.72)" data-i18n="benefits_kicker">Impacto</span>
-            <h2 id="benefits-title" data-i18n="benefits_title">Beneficios reales</h2>
+            <span
+              class="kicker"
+              style="color: rgba(255, 255, 255, 0.72)"
+              data-i18n="benefits_kicker"
+              >Impacto</span
+            >
+            <h2 id="benefits-title" data-i18n="benefits_title">
+              Beneficios reales
+            </h2>
           </div>
 
           <div class="badges">
-            <span class="badge" data-i18n="benefit_badge_1">Stock en tiempo real</span>
-            <span class="badge" data-i18n="benefit_badge_2">Reposición inteligente</span>
-            <span class="badge" data-i18n="benefit_badge_3">Menos quiebres</span>
+            <span class="badge" data-i18n="benefit_badge_1"
+              >Stock en tiempo real</span
+            >
+            <span class="badge" data-i18n="benefit_badge_2"
+              >Reposición inteligente</span
+            >
+            <span class="badge" data-i18n="benefit_badge_3"
+              >Menos quiebres</span
+            >
           </div>
 
           <div class="benefits-grid">
             <article class="benefits-col">
               <h3 data-i18n="benefits_col_1">Para licorerías</h3>
               <div class="checks">
-                <div class="check"><span class="mark">✓</span><span data-i18n="benefits_l_1">Alertas por mínimos y caducidad</span></div>
-                <div class="check"><span class="mark">✓</span><span data-i18n="benefits_l_2">Control de costos y margen</span></div>
-                <div class="check"><span class="mark">✓</span><span data-i18n="benefits_l_3">Reportes simples para decidir</span></div>
+                <div class="check">
+                  <span class="mark">✓</span
+                  ><span data-i18n="benefits_l_1"
+                    >Alertas por mínimos y caducidad</span
+                  >
+                </div>
+                <div class="check">
+                  <span class="mark">✓</span
+                  ><span data-i18n="benefits_l_2"
+                    >Control de costos y margen</span
+                  >
+                </div>
+                <div class="check">
+                  <span class="mark">✓</span
+                  ><span data-i18n="benefits_l_3"
+                    >Reportes simples para decidir</span
+                  >
+                </div>
               </div>
             </article>
 
             <article class="benefits-col">
               <h3 data-i18n="benefits_col_2">Para proveedores</h3>
               <div class="checks">
-                <div class="check"><span class="mark">✓</span><span data-i18n="benefits_p_1">Demanda más predecible</span></div>
-                <div class="check"><span class="mark">✓</span><span data-i18n="benefits_p_2">Menos urgencias, más planificación</span></div>
-                <div class="check"><span class="mark">✓</span><span data-i18n="benefits_p_3">Relación basada en datos</span></div>
+                <div class="check">
+                  <span class="mark">✓</span
+                  ><span data-i18n="benefits_p_1">Demanda más predecible</span>
+                </div>
+                <div class="check">
+                  <span class="mark">✓</span
+                  ><span data-i18n="benefits_p_2"
+                    >Menos urgencias, más planificación</span
+                  >
+                </div>
+                <div class="check">
+                  <span class="mark">✓</span
+                  ><span data-i18n="benefits_p_3"
+                    >Relación basada en datos</span
+                  >
+                </div>
               </div>
             </article>
           </div>
@@ -406,24 +768,46 @@
           <div class="faq glass" data-faq>
             <div class="faq-item">
               <button class="faq-q" type="button" aria-expanded="false">
-                <span data-i18n="faq_q_1">¿StockSip funciona en múltiples sucursales?</span>
+                <span data-i18n="faq_q_1"
+                  >¿StockSip funciona en múltiples sucursales?</span
+                >
                 <span class="faq-icon" aria-hidden="true">+</span>
               </button>
-              <div class="faq-a" aria-hidden="true"><div><p data-i18n="faq_a_1">Sí. Puedes gestionar inventario por ubicación y consolidar reportes.</p></div></div>
+              <div class="faq-a" aria-hidden="true">
+                <div>
+                  <p data-i18n="faq_a_1">
+                    Sí. Puedes gestionar inventario por ubicación y consolidar
+                    reportes.
+                  </p>
+                </div>
+              </div>
             </div>
             <div class="faq-item">
               <button class="faq-q" type="button" aria-expanded="false">
                 <span data-i18n="faq_q_2">¿Necesito capacitación?</span>
                 <span class="faq-icon" aria-hidden="true">+</span>
               </button>
-              <div class="faq-a" aria-hidden="true"><div><p data-i18n="faq_a_2">La interfaz es minimalista. Incluimos onboarding guiado y soporte.</p></div></div>
+              <div class="faq-a" aria-hidden="true">
+                <div>
+                  <p data-i18n="faq_a_2">
+                    La interfaz es minimalista. Incluimos onboarding guiado y
+                    soporte.
+                  </p>
+                </div>
+              </div>
             </div>
             <div class="faq-item">
               <button class="faq-q" type="button" aria-expanded="false">
                 <span data-i18n="faq_q_3">¿Puedo exportar mis datos?</span>
                 <span class="faq-icon" aria-hidden="true">+</span>
               </button>
-              <div class="faq-a" aria-hidden="true"><div><p data-i18n="faq_a_3">Sí. Exportación para reportes y conciliación operativa.</p></div></div>
+              <div class="faq-a" aria-hidden="true">
+                <div>
+                  <p data-i18n="faq_a_3">
+                    Sí. Exportación para reportes y conciliación operativa.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -432,7 +816,12 @@
       <section id="plans" class="section bg-top" aria-labelledby="plans-title">
         <div class="container">
           <div class="section-title">
-            <span class="kicker" style="color: rgba(255, 255, 255, 0.72)" data-i18n="plans_kicker">Precios</span>
+            <span
+              class="kicker"
+              style="color: rgba(255, 255, 255, 0.72)"
+              data-i18n="plans_kicker"
+              >Precios</span
+            >
             <h2 id="plans-title" data-i18n="plans_title">Planes</h2>
           </div>
 
@@ -442,45 +831,101 @@
               <div class="price" data-i18n="plans.free.price">S/. 0</div>
               <ul>
                 <li data-i18n="plans.free.warehouse">Hasta 1 almacén</li>
-                <li data-i18n="plans.free.products">Gestionar hasta 50 productos</li>
+                <li data-i18n="plans.free.products">
+                  Gestionar hasta 50 productos
+                </li>
                 <li data-i18n="plans.free.guides">Guías de almacenamiento</li>
                 <li data-i18n="plans.free.alerts">Alertas básicas</li>
                 <li data-i18n="plans.free.support">Soporte comunitario</li>
               </ul>
-              <button class="btn btn-secondary" data-i18n="plans.free.button">Empezar</button>
+              <button class="btn btn-secondary" data-i18n="plans.free.button">
+                Empezar
+              </button>
             </article>
 
-            <article class="plan popular animate-fade-up" data-stagger style="--i: 1">
-              <span class="popular-badge" data-i18n="plan_popular">MÁS POPULAR</span>
-              <h3 style="margin-top: 10px" data-i18n="plans.monthly.title">Premium Mensual</h3>
-              <div class="price" data-i18n="plans.monthly.price">S/. 19.90<span style="font-size: 1.6rem; font-weight: 400;">/mes</span></div>
+            <article
+              class="plan popular animate-fade-up"
+              data-stagger
+              style="--i: 1"
+            >
+              <span class="popular-badge" data-i18n="plan_popular"
+                >MÁS POPULAR</span
+              >
+              <h3 style="margin-top: 10px" data-i18n="plans.monthly.title">
+                Premium Mensual
+              </h3>
+              <div class="price" data-i18n="plans.monthly.price">
+                S/. 19.90<span style="font-size: 1.6rem; font-weight: 400"
+                  >/mes</span
+                >
+              </div>
               <ul>
                 <li data-i18n="plans.monthly.warehouse">Hasta 5 almacenes</li>
                 <li data-i18n="plans.monthly.products">Productos ilimitados</li>
-                <li data-i18n="plans.monthly.guides">Guías de almacenamiento avanzadas</li>
-                <li data-i18n="plans.monthly.alerts">Alertas personalizadas y notificaciones</li>
+                <li data-i18n="plans.monthly.guides">
+                  Guías de almacenamiento avanzadas
+                </li>
+                <li data-i18n="plans.monthly.alerts">
+                  Alertas personalizadas y notificaciones
+                </li>
                 <li data-i18n="plans.monthly.support">Soporte prioritario</li>
-                <li data-i18n="plans.monthly.analytics">Analíticas avanzadas</li>
+                <li data-i18n="plans.monthly.analytics">
+                  Analíticas avanzadas
+                </li>
                 <li data-i18n="plans.monthly.integration">Integración API</li>
               </ul>
-              <button class="btn btn-primary" data-i18n="plans.monthly.button">Iniciar prueba gratis</button>
+              <button class="btn btn-primary" data-i18n="plans.monthly.button">
+                Iniciar prueba gratis
+              </button>
             </article>
 
             <article class="plan animate-fade-up" data-stagger style="--i: 2">
               <h3 data-i18n="plans.annual.title">Premium Anual</h3>
-              <div class="price" data-i18n="plans.annual.price">S/. 179.90<span style="font-size: 1.6rem; font-weight: 400;">/año</span></div>
-              <div style="background: rgba(229, 62, 62, 0.15); color: var(--white); padding: 0.5rem 1rem; border-radius: 15px; font-size: 0.85rem; font-weight: 600; margin: 1rem 0; text-align: center;" data-i18n="plans.annual.savings">¡Ahorra 25%!</div>
+              <div class="price" data-i18n="plans.annual.price">
+                S/. 179.90<span style="font-size: 1.6rem; font-weight: 400"
+                  >/año</span
+                >
+              </div>
+              <div
+                style="
+                  background: rgba(229, 62, 62, 0.15);
+                  color: var(--white);
+                  padding: 0.5rem 1rem;
+                  border-radius: 15px;
+                  font-size: 0.85rem;
+                  font-weight: 600;
+                  margin: 1rem 0;
+                  text-align: center;
+                "
+                data-i18n="plans.annual.savings"
+              >
+                ¡Ahorra 25%!
+              </div>
               <ul>
                 <li data-i18n="plans.annual.warehouse">Hasta 10 almacenes</li>
                 <li data-i18n="plans.annual.products">Productos ilimitados</li>
-                <li data-i18n="plans.annual.guides">Guías de almacenamiento premium</li>
-                <li data-i18n="plans.annual.alerts">Alertas inteligentes y automatización</li>
-                <li data-i18n="plans.annual.support">Soporte prioritario 24/7</li>
-                <li data-i18n="plans.annual.analytics">Analíticas premium y reportes</li>
-                <li data-i18n="plans.annual.integration">Acceso completo a API</li>
-                <li data-i18n="plans.annual.training">Sesión de capacitación personalizada</li>
+                <li data-i18n="plans.annual.guides">
+                  Guías de almacenamiento premium
+                </li>
+                <li data-i18n="plans.annual.alerts">
+                  Alertas inteligentes y automatización
+                </li>
+                <li data-i18n="plans.annual.support">
+                  Soporte prioritario 24/7
+                </li>
+                <li data-i18n="plans.annual.analytics">
+                  Analíticas premium y reportes
+                </li>
+                <li data-i18n="plans.annual.integration">
+                  Acceso completo a API
+                </li>
+                <li data-i18n="plans.annual.training">
+                  Sesión de capacitación personalizada
+                </li>
               </ul>
-              <button class="btn btn-secondary" data-i18n="plans.annual.button">Elegir anual</button>
+              <button class="btn btn-secondary" data-i18n="plans.annual.button">
+                Elegir anual
+              </button>
             </article>
           </div>
         </div>
@@ -494,35 +939,74 @@
           </div>
 
           <div class="testimonials">
-            <article class="quote glass animate-fade-up" data-stagger style="--i: 0">
-              <p data-i18n="testi_1">“Ahora reponemos con seguridad. Bajaron los quiebres y el equipo trabaja más rápido.”</p>
+            <article
+              class="quote glass animate-fade-up"
+              data-stagger
+              style="--i: 0"
+            >
+              <p data-i18n="testi_1">
+                “Ahora reponemos con seguridad. Bajaron los quiebres y el equipo
+                trabaja más rápido.”
+              </p>
               <div class="quote-footer">
-                <img loading="lazy" alt="Cliente" src="./assets/images/team1.png" />
+                <img
+                  loading="lazy"
+                  alt="Cliente"
+                  src="./assets/images/team1.png"
+                />
                 <div class="who">
                   <strong>Paola</strong>
-                  <span class="muted" data-i18n="testi_1_who">Licorería Centro</span>
+                  <span class="muted" data-i18n="testi_1_who"
+                    >Licorería Centro</span
+                  >
                 </div>
               </div>
             </article>
 
-            <article class="quote glass animate-fade-up" data-stagger style="--i: 1">
-              <p data-i18n="testi_2">“La claridad de los reportes nos ayudó a comprar mejor. Menos sobrestock.”</p>
+            <article
+              class="quote glass animate-fade-up"
+              data-stagger
+              style="--i: 1"
+            >
+              <p data-i18n="testi_2">
+                “La claridad de los reportes nos ayudó a comprar mejor. Menos
+                sobrestock.”
+              </p>
               <div class="quote-footer">
-                <img loading="lazy" alt="Cliente" src="./assets/images/team2.png" />
+                <img
+                  loading="lazy"
+                  alt="Cliente"
+                  src="./assets/images/team2.png"
+                />
                 <div class="who">
                   <strong>Diego</strong>
-                  <span class="muted" data-i18n="testi_2_who">Distribuidora Norte</span>
+                  <span class="muted" data-i18n="testi_2_who"
+                    >Distribuidora Norte</span
+                  >
                 </div>
               </div>
             </article>
 
-            <article class="quote glass animate-fade-up" data-stagger style="--i: 2">
-              <p data-i18n="testi_3">“Implementación simple y soporte atento. Se siente hecho para el día a día.”</p>
+            <article
+              class="quote glass animate-fade-up"
+              data-stagger
+              style="--i: 2"
+            >
+              <p data-i18n="testi_3">
+                “Implementación simple y soporte atento. Se siente hecho para el
+                día a día.”
+              </p>
               <div class="quote-footer">
-                <img loading="lazy" alt="Cliente" src="./assets/images/team3.png" />
+                <img
+                  loading="lazy"
+                  alt="Cliente"
+                  src="./assets/images/team3.png"
+                />
                 <div class="who">
                   <strong>Sofía</strong>
-                  <span class="muted" data-i18n="testi_3_who">Licorería Sur</span>
+                  <span class="muted" data-i18n="testi_3_who"
+                    >Licorería Sur</span
+                  >
                 </div>
               </div>
             </article>
@@ -539,11 +1023,21 @@
               <img src="assets/images/stocksip_logo.png" alt="StockSip" />
               <span>StockSip</span>
             </a>
-            <p style="color: rgba(255, 255, 255, 0.72); max-width: 46ch" data-i18n="footer_tagline">Inventario minimalista para operar mejor. Datos claros, menos ruido.</p>
+            <p
+              style="color: rgba(255, 255, 255, 0.72); max-width: 46ch"
+              data-i18n="footer_tagline"
+            >
+              Inventario minimalista para operar mejor. Datos claros, menos
+              ruido.
+            </p>
           </div>
 
           <div>
-            <strong style="color: rgba(255, 255, 255, 0.92)" data-i18n="footer_nav">Navegación</strong>
+            <strong
+              style="color: rgba(255, 255, 255, 0.92)"
+              data-i18n="footer_nav"
+              >Navegación</strong
+            >
             <div style="display: grid; gap: 10px; margin-top: 12px">
               <a href="#product" data-i18n="nav_product">Producto</a>
               <a href="#features" data-i18n="nav_features">Características</a>
@@ -553,11 +1047,15 @@
           </div>
 
           <div>
-            <strong style="color: rgba(255, 255, 255, 0.92)" data-i18n="footer_social">Redes</strong>
+            <strong
+              style="color: rgba(255, 255, 255, 0.92)"
+              data-i18n="footer_social"
+              >Redes</strong
+            >
             <div style="display: grid; gap: 10px; margin-top: 12px">
               <a href="#" aria-label="Instagram">Instagram</a>
               <a href="#" aria-label="LinkedIn">LinkedIn</a>
-              <a href="#" aria-label="Correo">hola@stocksip.app</a>
+              <a href="#" aria-label="Correo">liquotrack@gmail.com</a>
             </div>
           </div>
         </div>
@@ -567,7 +1065,9 @@
         <div class="footer-bottom">
           <span>© <span id="year"></span> StockSip</span>
           <div class="footer-links">
-            <a href="terms_conditions.html" data-i18n="footer_terms">Términos</a>
+            <a href="terms_conditions.html" data-i18n="footer_terms"
+              >Términos</a
+            >
             <a href="privacy.html" data-i18n="footer_privacy">Privacidad</a>
           </div>
         </div>
