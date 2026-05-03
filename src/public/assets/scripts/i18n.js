@@ -7,6 +7,7 @@ const i18n = {
     nav_faq: "FAQ",
     nav_contact: "Contacto",
     header_start: "Empezar",
+    header_web: "Web App",
 
     hero_word_1: "Gestión",
     hero_word_2: "de",
@@ -453,6 +454,7 @@ const i18n = {
     nav_faq: "FAQ",
     nav_contact: "Contact",
     header_start: "Get started",
+    header_web: "Web App",
 
     hero_word_1: "Smart",
     hero_word_2: "inventory",
